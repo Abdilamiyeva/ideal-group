@@ -2,6 +2,7 @@
     position: relative;
     max-width: toRem(328);
     padding-bottom: toRem(20);
+    cursor: pointer;
     padding-top: toRem(20);
     background: white;
     &__image{
@@ -35,6 +36,7 @@
         font-weight: 500;
         max-width: toRem(288);
         margin-bottom: toRem(40);
+        transition: all 0.25s ease;
     }
 
     &__bottom__content{
@@ -55,11 +57,6 @@
             transition: all 0.25s ease;
             @include adaptiveValue("padding-left", 30, 20);
             @include adaptiveValue("padding-right", 30, 20);
-
-            &:hover{
-                background:$goldDark;
-                color: white;
-            }
         }
 
         &-number{
@@ -93,51 +90,11 @@
         stroke:$gold; 
         fill: $gold;  
     }
-    // @media (min-width: $mobileSmall) {
-    //     &__content{
-    //         margin: 0 toRem(10);
-    //     }
-    //     &__price{
-    //         font-size: toRem(19);
-    //     }
-    //     &__info{
-    //         margin-bottom: toRem(30);
-    //     }
-    //     &__bottom__content{
-    //         flex-direction: column-reverse;
-    //         gap: toRem(7);
-    
-    //     }
-    //     &__btn{
-    //         width: 100%;
-    //         @include adaptiveValue("padding-left", 30, 20);
-    //         @include adaptiveValue("padding-right", 30, 20);
-    //     }
-    //     &__number{
-    //         display: flex;
-    //         align-items:center;
-    //         justify-content:center;
-    //         width: 100%;
-    //     }
-
-    // }
-    // @media (min-width:$mobile) {
-    //     &__bottom__content{
-    //         display: grid;
-    //         grid-template-columns: repeat(2, 1fr);
-    //     }
-    //    &__btn{
-    //     flex-wrap: nowrap;
-    //    }
-        
-    // }
-    // @media (min-width: $mobile) {
-    //     @include gridCards("fit", toRem(240), 1fr);
-    //     grid-template-columns: repeat(2, 1fr);
-    // }
-    // @media (min-width: $tablet) {
-    //     grid-template-columns: repeat(3, 1fr);
-    //     @include adaptiveValue("column-gap", 30, 20);
-    //     @include adaptiveValue("row-gap", 30, 20);
-    // }
+    &:hover &__info{
+        color: $gold;
+    }
+    &:hover &__bottom__content-btn {
+        background:$goldDark;
+        color: white;
+    }
 }

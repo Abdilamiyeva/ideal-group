@@ -150,6 +150,11 @@
                     }
                 }
             }
+
+            @media (min-width:0) and (max-width:$mobile) {
+                    width: 100%;
+                    margin-bottom: toRem(30);
+            }
         }
        
         &__right__content{
