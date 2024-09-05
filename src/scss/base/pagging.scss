@@ -1,0 +1,42 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	// .pagging__arrow
+	&__arrow {
+		display: flex;
+		align-items: center;
+		span{
+			font-size: toRem(14);
+			font-weight: 400;
+			line-height: toRem(20);
+			color: $black_1;
+			display: block;
+			margin-right: 10px;
+		}
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		gap: toRem(10);
+		li {
+			
+		}
+	}
+	// .pagging__item
+	&__item {
+		color: $black_1;
+			font-weight: 400;
+			text-align: center;
+			line-height: toRem(20);
+			font-size: toRem(14);
+			padding: toRem(5) toRem(4);
+			border-radius: toRem(4);
+			border: 1px solid  $grey3;
+			width: toRem(32);
+			height: toRem(32);
+		&._active {
+			background: $grey3;
+		}
+	}
+}

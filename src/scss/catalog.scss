@@ -1,0 +1,10 @@
+
+#catalog{
+    margin-top: toRem(30);
+    .catalog__section-title{
+        text-align: center;
+        @extend %heading_3;
+        @include adaptiveValue("margin-bottom", 60, 24);
+        @include adaptiveValue("margin-top", 60, 24);
+    }
+}

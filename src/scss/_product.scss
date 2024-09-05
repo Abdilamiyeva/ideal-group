@@ -1,0 +1,124 @@
+.product{
+    position: relative;
+    width: toRem(328);
+    padding-bottom: toRem(20);
+    padding-top: toRem(20);
+    background: white;
+    &__image{
+        width: toRem(75.461);
+        margin: toRem(61) auto;
+      
+    }
+    &__icons{
+        position: absolute;
+        right: toRem(20);
+        top: toRem(20);
+        svg{
+            margin-bottom: toRem(15);
+            display: block;
+        }
+    }
+    &__content{
+        margin: 0 toRem(20);
+    }
+    &__price{
+        color: $mainColor;
+        display: block;
+        font-size: toRem(24);
+        font-weight: 600;
+        margin-bottom: toRem(20);
+    }
+    &__info{
+        color: $mainColor;
+        font-size: toRem(14);
+        font-weight: 500;
+        max-width: toRem(288);
+        margin-bottom: toRem(40);
+    }
+
+    &__bottom__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: toRem(7);
+
+        &-btn{
+            color: $mainColor;
+            padding: toRem(11) 0;
+            border-radius: toRem(30);
+            background: $gold;
+            font-size: toRem(15);
+            font-weight: 500;
+            text-align:center;
+            flex-wrap: nowrap;
+            @include adaptiveValue("padding-left", 30, 20);
+            @include adaptiveValue("padding-right", 30, 20);
+        }
+
+        &-number{
+            display: flex;
+            align-items:center;
+            border-radius: toRem(4);
+            border: 1px solid $grey2;
+            
+            .inc, .dec{
+                padding: toRem(11) toRem(16);
+                font-size: toRem(15);
+                font-weight: 500;
+            }
+            .num{
+                padding: toRem(11) toRem(26);
+                font-size: toRem(15);
+                font-weight: 500;
+            }
+        }
+    }
+  
+    // @media (min-width: $mobileSmall) {
+    //     &__content{
+    //         margin: 0 toRem(10);
+    //     }
+    //     &__price{
+    //         font-size: toRem(19);
+    //     }
+    //     &__info{
+    //         margin-bottom: toRem(30);
+    //     }
+    //     &__bottom__content{
+    //         flex-direction: column-reverse;
+    //         gap: toRem(7);
+    
+    //     }
+    //     &__btn{
+    //         width: 100%;
+    //         @include adaptiveValue("padding-left", 30, 20);
+    //         @include adaptiveValue("padding-right", 30, 20);
+    //     }
+    //     &__number{
+    //         display: flex;
+    //         align-items:center;
+    //         justify-content:center;
+    //         width: 100%;
+    //     }
+
+    // }
+    // @media (min-width:$mobile) {
+    //     &__bottom__content{
+    //         display: grid;
+    //         grid-template-columns: repeat(2, 1fr);
+    //     }
+    //    &__btn{
+    //     flex-wrap: nowrap;
+    //    }
+        
+    // }
+    // @media (min-width: $mobile) {
+    //     @include gridCards("fit", toRem(240), 1fr);
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
+    // @media (min-width: $tablet) {
+    //     grid-template-columns: repeat(3, 1fr);
+    //     @include adaptiveValue("column-gap", 30, 20);
+    //     @include adaptiveValue("row-gap", 30, 20);
+    // }
+}

@@ -1,0 +1,80 @@
+//<FORM>
+// Сніппет (HTML):
+.form {
+	&__title {
+		@extend %heading_3;
+		margin-bottom: toRem(28);
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		margin-bottom: toRem(42);
+		font-weight: 500;
+		text-align: center;
+	}
+	&__row {
+		display: grid;
+		@include adaptiveValue("gap", 30, 20);
+		@include adaptiveValue("margin-bottom", 50, 24);
+
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	&__input {
+	}
+	&__privacy {
+		display: block;
+		margin-bottom: toRem(54);
+		text-align: center;
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__button {
+	}
+	&__error {
+	}
+}
+.form {
+}
+
+//</FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+ @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";
+

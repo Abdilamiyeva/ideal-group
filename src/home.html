@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage",
+"description":"Здесь будет мета описание страницы"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			@@include('html/_intro.htm',{})
+
+			<section data-tabs class="categories">
+				<div class="categories__container">
+					<h2 class="categories__section-title">Категории товаров</h2>
+					<nav data-tabs-titles class="categories__navigation">
+						<button type="button" class="categories__title _tab-active">DIO</button>
+						<button type="button" class="categories__title">Voc</button>
+					</nav>
+					<div data-tabs-body class="categories__content">
+						<div class="categories__body">
+							<div class="categories__list">
+								@@include('html/_category.htm',{
+								"image":"cat1.png",
+								"title": "Имплантационная система DIO"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat2.png",
+								"title": "Супраструктура DIO"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat3.png",
+								"title": "Хирургические наборы DIO"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat4.png",
+								"title": "UV Activator"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat5.png",
+								"title": "DIO Probo Z"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat6.png",
+								"title": "DIO Probo Cure2"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat7.png",
+								"title": "DIO ECO CAD Software"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat8.png",
+								"title": "⁠Цифровое решение DIO"
+								})
+							</div>
+						</div>
+						<div class="categories__body">
+							<div class="categories__list">
+								@@include('html/_category.htm',{
+								"image":"cat2.png",
+								"title": "Супраструктура DIO"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat1.png",
+								"title": "Имплантационная система DIO"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat6.png",
+								"title": "DIO Probo Cure2"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat3.png",
+								"title": "Хирургические наборы DIO"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat4.png",
+								"title": "UV Activator"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat5.png",
+								"title": "DIO Probo Z"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat8.png",
+								"title": "⁠Цифровое решение DIO"
+								})
+								@@include('html/_category.htm',{
+								"image":"cat7.png",
+								"title": "DIO ECO CAD Software"
+								})
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="callback callback--first">
+				<div class="callback__container">
+					<form class="callback__form form">
+						<h3 class="form__title">Появились вопросы?</h3>
+						<div class="form__subtitle">Оставьте заявку и наш специалист свяжется с вами в ближайшее время
+						</div>
+						<div class="form__row">
+							<div class="form__input">
+								<label>Имя*</label>
+								<input autocomplete="off" type="text" name="form[name]" data-error="Обязательное поле"
+									placeholder="" class="input">
+							</div>
+							<div class="form__input">
+								<label>Телефон*</label>
+								<input autocomplete="off" type="tel" name="form[phone]" data-error="Обязательное поле"
+									placeholder="+7 (___) ___-__-__" class="input">
+							</div>
+						</div>
+						<a href="#" class="form__privacy">*Политика конфиденциальности персональных данных</a>
+						<button type="submit" class="button button--gold">Получить консультацию</button>
+					</form>
+				</div>
+			</div>
+
+			<section class="approach">
+				<h2 class="approach__title">для кого мы подходим:</h2>
+				<div class="approach__outer">
+					<div class="approach__container">
+						<div class="empty"></div>
+						<div class="approach__content">
+							<div class="approach__row row-approach">
+								<div class="row-approach__text">
+									<h3>стоматологи и стоматологические клиники:</h3>
+									<ul>
+										<li>Хирург стоматолог</li>
+										<li>ортопед стоматолог</li>
+										<li>гигиенист</li>
+										<li>зубной техник</li>
+										<li>челюстной-лицевой хирург</li>
+										<li>терапевт</li>
+										<li>ортодонт</li>
+									</ul>
+								</div>
+								<div class="row-approach__image">
+									<img src="@img/approach1.png" alt="Image">
+								</div>
+							</div>
+							<div class="approach__row row-approach">
+								<div class="row-approach__image">
+									<img src="@img/approach2.png" alt="Image">
+								</div>
+								<div class="row-approach__text">
+									<h3>пациентам всех возрастов</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="whywe">
+				<div class="whywe__container">
+					<h2 class="whywe__title">Почему стоит выбрать именно нас</h2>
+					<div class="whywe__list">
+						<div class="whywe__item item-whywe">
+							<div class="item-whywe__icon">
+								<img src="@img/whywe/item1.svg" alt="Товары премиального качества">
+							</div>
+							<div class="item-whywe__text">Товары премиального качества</div>
+						</div>
+						<div class="whywe__item item-whywe">
+							<div class="item-whywe__icon">
+								<img src="@img/whywe/item2.svg" alt="Гарантия на все товары">
+							</div>
+							<div class="item-whywe__text">Гарантия на все товары</div>
+						</div>
+						<div class="whywe__item item-whywe">
+							<div class="item-whywe__icon">
+								<img src="@img/whywe/item3.svg" alt="Индивидуальный подход">
+							</div>
+							<div class="item-whywe__text">Индивидуальный подход</div>
+						</div>
+						<div class="whywe__item item-whywe">
+							<div class="item-whywe__icon">
+								<img src="@img/whywe/item4.svg" alt="Быстрая доставка">
+							</div>
+							<div class="item-whywe__text">Быстрая доставка</div>
+						</div>
+						<div class="whywe__bg-text">
+							<img src="@img/whywe/bg-text.svg" alt="Image">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="callback callback--second">
+				<div class="callback__container">
+					<form class="callback__form form">
+						<h3 class="form__title">Появились вопросы?</h3>
+						<div class="form__subtitle">Оставьте заявку и наш специалист свяжется с вами в ближайшее время
+						</div>
+						<div class="form__row">
+							<div class="form__input">
+								<label>Имя*</label>
+								<input autocomplete="off" type="text" name="form[name]" data-error="Обязательное поле"
+									placeholder="" class="input">
+							</div>
+							<div class="form__input">
+								<label>Телефон*</label>
+								<input autocomplete="off" type="tel" name="form[phone]" data-error="Обязательное поле"
+									placeholder="+7 (___) ___-__-__" class="input">
+							</div>
+						</div>
+						<a href="#" class="form__privacy">*Политика конфиденциальности персональных данных</a>
+						<button type="submit" class="button button--gold">Получить консультацию</button>
+					</form>
+				</div>
+			</div>
+
+			@@include('html/_category-row.htm',{
+			"title":"Система имплантатов DIO",
+			"logo":"logo-dio.png",
+			"image":"dio-image.jpg"
+			})
+			@@include('html/_category-row.htm',{
+			"title":"Система профессионального ухода и лечения воспалений полости рта",
+			"logo":"voc-logo.png",
+			"image":"voc-image.png"
+			})
+			@@include('html/_category-row.htm',{
+			"title":"оборудование DIO",
+			"logo":"logo-dio.png",
+			"image":"dio-image-2.jpg"
+			})
+			@@include('html/_category-row.htm',{
+			"title":"инструменты и наборы",
+			"logo":"",
+			"styles":"display: none",
+			"image":"instruments.jpg"
+			})
+			@@include('html/_category-row.htm',{
+			"title":"расходные материалы",
+			"logo":"consumables-logo.png",
+			"image":"consumables-image.jpg"
+			})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

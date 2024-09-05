@@ -1,0 +1,268 @@
+
+.wrapper{
+    .system{
+        &__container{
+            padding-top: toRem(30);
+        }
+        &__title{
+                color: $mainColor;
+                text-transform: uppercase;
+                padding-bottom:toRem(20) ;
+                border-bottom: 2px solid $mainColor;
+                @extend %heading_3;
+                @include adaptiveValue("margin-bottom", 60, 24);
+                @include adaptiveValue("margin-top", 60, 24);      
+        }
+        &__content{
+            display: flex;
+            justify-content: space-between;
+            @include adaptiveValue("column-gap", 91, 20);
+
+            @media (min-width: 0) {
+                flex-direction: column;
+
+
+            }
+
+            @media (min-width: $mobile) {
+                
+                flex-direction: row;
+                
+            }
+
+
+        }
+        &__left__content{
+            width: 265px;
+            &-title{
+                font-size: toRem(14);
+                color: $mainColor;
+                font-weight:600;
+                width: toRem(265);
+                text-transform: uppercase;
+                padding-bottom: toRem(11.5);
+                border-bottom: 2px solid $mainColor;
+            }
+            &-items{
+                margin-left: toRem(30);
+            }
+            &-item{
+                list-style:disc;
+                padding: toRem(11.5) 0;
+                a{
+                    color: $mainColor;
+                    font-size: toRem(14);
+                    font-weight: 500;
+
+                }
+                &__link{
+                    padding: toRem(11.5) 0;  
+                    padding-left: toRem(18);
+                    &__first{
+                        margin-top: toRem(11.5);
+                    }
+                }
+               
+            }
+            .active {
+                color: $goldDark;
+                a{
+                    color: $goldDark;
+                }
+            }
+            .retail__price{
+                
+                @include adaptiveValue("margin-top", 60, 30);
+                &__name{
+                    font-size: toRem(14);
+                    font-weight: 400;
+                    color: $mainColor;
+                }
+                &__values__wrapper{
+                    display: flex;
+                    align-items:center;
+                    margin-top: toRem(16);
+                    gap: 15px;
+                    input{
+                        display: inline;
+                        border: 1px solid $grey2 ;
+                        width: toRem(131);
+                        padding: toRem(8) toRem(5);
+                        color: $grey2;
+                        font-size: toRem(12);
+                        font-weight: 400;
+                        border-radius:toRem(4) ;
+                        &::placeholder{
+                            color: $grey2;
+                            font-size: toRem(12);
+                            font-weight: 400;
+                        }
+                    }
+                } 
+            }
+            .range__values{
+                display: flex;
+                margin-top: 20px;
+                margin-left: 0px;
+                margin-bottom: toRem(31);
+                gap: 160px;
+                .value-start{
+                    text-align: left;
+                    font-size: toRem(12);
+                    font-weight: 500;
+                }
+                .value-end{
+                    text-align: left;
+                    font-size: toRem(12);
+                    font-weight: 500;
+                }
+            }
+            .system__bottom__content__buttons{
+                display: flex;
+                align-items: center;
+                gap:toRem(16);
+                @include adaptiveValue("margin-top", 60,30);
+                .btn__1{
+                    padding: toRem(8) toRem(5);
+                    border-radius: toRem(16);
+                    background: $gold;
+                    font-size: toRem(12);
+                    font-weight: 400;
+                    text-align: center;
+                    height: 31px;
+                    width: toRem(125);
+                }
+                .btn__2{
+                    padding: toRem(8) toRem(5);
+                    border-radius: toRem(16);
+                    color: $goldDark;
+                    font-size: toRem(12);
+                    font-weight: 400;
+                    text-align: center;
+                    height: 31px;
+                    width: toRem(125);
+                    background: transparent;
+                }
+            }
+        }
+       
+        &__right__content{
+            &__cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 100px;
+                @include adaptiveValue("row-gap", 30, 20);
+
+                @media (min-width: $mobileSmall) {
+                }
+
+                @media (min-width: $mobile) {
+                }
+
+                @media (min-width: $tablet) {
+                }
+
+                @media (min-width: $pcSmall) {
+                }
+            }
+            &__button{
+                margin-bottom: toRem(39);
+                .btn{
+                    font-size: toRem(15);
+                    font-weight: 500;
+                    color: $mainColor;
+                    padding: toRem(15) 0;
+                    width: 100%;
+                    text-align: center;
+                    border-radius: 25px;
+                    background:$grey3;
+                    
+                }
+            }
+            .pagging__wrapper{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .product__number{
+                    font-size: toRem(14);
+                    font-weight: 400;
+                    line-height: toRem(20);
+                    color: $black_1;
+                }
+            }
+        }
+        .recommendations__title{
+            font-size: toRem(24);
+            font-weight: 500;
+            color: $mainColor;
+            text-transform: uppercase;
+            text-align: center;
+            @include adaptiveValue("margin-top",60, 20);
+            @include adaptiveValue("margin-bottom",57, 20);
+
+        }
+      
+    }
+    .recommendations__cards{
+        position: relative;
+        padding: 0 20px;
+        background: #EFEFEF;
+        height: 600px;
+        
+        .recommendations__container{
+            .swiper{
+                margin-top: toRem(30);
+                &-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 30px;
+                }
+               &-slide{
+                    width: 328px !important;
+               } 
+               &-button-next{
+                position: absolute;
+                z-index: 999;
+                right: 0;
+                top:226px;
+                cursor: pointer;
+
+               }
+               &-button-prev{
+                position: absolute;
+                z-index: 999;
+                left: 0;
+                top:226px;
+                cursor: pointer;
+
+               }
+            }
+        }
+        
+    }
+   
+}
+
+
+// $pc: toEm($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+// $tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
+// $mobile: toEm(767.98); // Телефони L
+// $mobileSmall: toEm(479.98); // Телефони S
+
+// &__list {
+//     display: flex;
+//     gap: toRem(30);
+
+//     overflow-x: auto;
+
+//     @media (min-width: $mobileSmall) {
+//         @include gridCards("fit", toRem(240), 1fr);
+//     }
+//     @media (min-width: $tablet) {
+//         grid-template-columns: repeat(3, 1fr);
+//         @include adaptiveValue("column-gap", 205, 30);
+//         @include adaptiveValue("row-gap", 65, 20);
+//     }
+// }

@@ -1,0 +1,70 @@
+$border-radius: 4px;
+$stroke-width: 4px;
+$scale-factor: 1.03;
+
+.checkbox-wrapper-23 {
+	margin-bottom: 15px;
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  
+  input {
+    position: absolute;
+    opacity: 0;
+
+  }
+
+  input:checked + label svg path {
+    stroke-dashoffset: 0;
+  }
+  input:checked + label{
+	background: $gold;
+	border: 2px solid transparent;
+  }
+
+  input:focus + label {
+    transform: scale($scale-factor);
+
+  }
+
+  input + label {
+    border: 2px solid #999;
+    width: 25px;
+    height: 25px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: all 0.2s ease;
+	vertical-align:middle;
+
+  }
+  .check__title{
+	font-size: toRem(14);
+	color: $black_1;
+	font-weight: 400;
+	display: inline;
+  }
+
+  input + label:active {
+    transform: scale(1.05);
+    border-radius: 12px;
+	
+  }
+
+  input + label svg {
+    pointer-events: none;
+    padding: 5%;
+  }
+
+  input + label svg path {
+    fill: none;
+    stroke: black;
+    stroke-width: $stroke-width;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 101;
+    transition: all 250ms cubic-bezier(1, 0, .37, .91);
+  }
+}
