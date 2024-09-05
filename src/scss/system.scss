@@ -21,16 +21,12 @@
             @media (min-width: 0) {
                 flex-direction: column;
 
-
             }
 
             @media (min-width: $mobile) {
-                
                 flex-direction: row;
                 
             }
-
-
         }
         &__left__content{
             width: 265px;
@@ -150,9 +146,9 @@
             &__cards{
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: center;
                 margin-bottom: 100px;
-                @include adaptiveValue("row-gap", 30, 20);
+                @include adaptiveValue("gap", 30, 20);
 
                 @media (min-width: $mobileSmall) {
                 }
@@ -247,23 +243,4 @@
 }
 
 
-// $pc: toEm($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
-// $tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
-// $mobile: toEm(767.98); // Телефони L
-// $mobileSmall: toEm(479.98); // Телефони S
 
-// &__list {
-//     display: flex;
-//     gap: toRem(30);
-
-//     overflow-x: auto;
-
-//     @media (min-width: $mobileSmall) {
-//         @include gridCards("fit", toRem(240), 1fr);
-//     }
-//     @media (min-width: $tablet) {
-//         grid-template-columns: repeat(3, 1fr);
-//         @include adaptiveValue("column-gap", 205, 30);
-//         @include adaptiveValue("row-gap", 65, 20);
-//     }
-// }

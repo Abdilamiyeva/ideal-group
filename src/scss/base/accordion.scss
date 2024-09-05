@@ -1,10 +1,11 @@
 
 .accordion__wrapper {
   margin: auto;
-  @media (max-width: 768px) {
-    width: auto;
-    padding: 0 0.3rem;
-  }
+  background: blueviolet;
+  // @media (max-width: 768px) {
+  //   width: auto;
+  //   padding: 0 0.3rem;
+  // }
 }
 input[type='radio'] {
   display: none;
@@ -32,7 +33,7 @@ input[type='radio'] {
   margin-bottom: 0.1rem;
 }
 .title {
-    padding: 13px 0 ;
+  padding: 13px 0 ;
   color:#333;
   border-bottom: 1px solid #D9D9D9;
   font-weight: 500;
@@ -51,7 +52,7 @@ input[type='radio'] {
   }
 }
 .content {
-  width: 95%;
+  // width: 95%;
   margin: 0 auto;
   padding: 0 0.3rem;
   line-height: 1.6;

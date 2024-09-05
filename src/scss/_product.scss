@@ -1,13 +1,13 @@
 .product{
     position: relative;
-    width: toRem(328);
+    max-width: toRem(328);
     padding-bottom: toRem(20);
     padding-top: toRem(20);
     background: white;
     &__image{
+        display: block;
         width: toRem(75.461);
         margin: toRem(61) auto;
-      
     }
     &__icons{
         position: absolute;
@@ -16,6 +16,8 @@
         svg{
             margin-bottom: toRem(15);
             display: block;
+            cursor: pointer;
+            
         }
     }
     &__content{
@@ -50,9 +52,15 @@
             font-size: toRem(15);
             font-weight: 500;
             text-align:center;
-            flex-wrap: nowrap;
+            white-space: nowrap;
+            transition: all 0.25s ease;
             @include adaptiveValue("padding-left", 30, 20);
             @include adaptiveValue("padding-right", 30, 20);
+
+            &:hover{
+                background:$goldDark;
+                color: white;
+            }
         }
 
         &-number{
@@ -65,15 +73,27 @@
                 padding: toRem(11) toRem(16);
                 font-size: toRem(15);
                 font-weight: 500;
+                height: 100%;
+                transition:all 0.25s ease;
+
+                &:hover{
+                    background:$grey3;
+                }
             }
+
             .num{
                 padding: toRem(11) toRem(26);
                 font-size: toRem(15);
                 font-weight: 500;
+                text-align: center;
             }
         }
     }
-  
+    
+    &:hover svg path{
+        stroke:$gold; 
+        fill: $gold;  
+    }
     // @media (min-width: $mobileSmall) {
     //     &__content{
     //         margin: 0 toRem(10);
