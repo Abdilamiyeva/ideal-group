@@ -13,7 +13,20 @@
 			color: $black_1;
 			display: block;
 			margin-right: 10px;
+			
 		}
+		svg{
+			transition: all .2s ease-in;
+		}
+		&:hover span{
+			color: $goldDark;
+		}
+		&:hover svg{
+			transform: translateX(10px);
+			fill: $goldDark;
+			stroke: $goldDark;
+		}
+
 	}
 	// .pagging__list
 	&__list {
@@ -26,16 +39,20 @@
 	// .pagging__item
 	&__item {
 		color: $black_1;
-			font-weight: 400;
-			text-align: center;
-			line-height: toRem(20);
-			font-size: toRem(14);
-			padding: toRem(5) toRem(4);
-			border-radius: toRem(4);
-			border: 1px solid  $grey3;
-			width: toRem(32);
-			height: toRem(32);
+		font-weight: 400;
+		text-align: center;
+		line-height: toRem(20);
+		font-size: toRem(14);
+		padding: toRem(5) toRem(4);
+		border-radius: toRem(4);
+		border: 1px solid  $grey3;
+		width: toRem(32);
+		height: toRem(32);
+		transition: all .25s ease-in;
 		&._active {
+			background: $grey3;
+		}
+		&:hover{
 			background: $grey3;
 		}
 	}

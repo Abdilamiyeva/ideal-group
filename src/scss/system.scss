@@ -127,6 +127,11 @@
                     text-align: center;
                     height: 31px;
                     width: toRem(125);
+                    transition: all 0.25s ease;
+                    &:hover{
+                        background:$goldDark;
+                        color:white ;
+                    }
                 }
                 .btn__2{
                     padding: toRem(8) toRem(5);
@@ -138,6 +143,11 @@
                     height: 31px;
                     width: toRem(125);
                     background: transparent;
+                    transition: all 0.25s ease;
+                    &:hover{
+                        background:$goldDark;
+                        color:white ;
+                    }
                 }
             }
         }
@@ -173,7 +183,10 @@
                     text-align: center;
                     border-radius: 25px;
                     background:$grey3;
-                    
+                    transition: all .25s ease-in;
+                    &:hover{
+                        background:$grey2;
+                    }
                 }
             }
             .pagging__wrapper{

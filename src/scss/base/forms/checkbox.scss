@@ -2,8 +2,9 @@ $border-radius: 4px;
 $stroke-width: 4px;
 $scale-factor: 1.03;
 
-.checkbox-wrapper-23 {
+.checkbox-wrapper {
 	margin-bottom: 15px;
+  max-width: max-content;
   *,
   *:after,
   *:before {
@@ -13,6 +14,7 @@ $scale-factor: 1.03;
   input {
     position: absolute;
     opacity: 0;
+    max-width: max-content;
 
   }
 
@@ -22,6 +24,7 @@ $scale-factor: 1.03;
   input:checked + label{
 	background: $gold;
 	border: 2px solid transparent;
+  
   }
 
   input:focus + label {
