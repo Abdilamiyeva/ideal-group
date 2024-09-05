@@ -39,4 +39,8 @@
 			background: $grey3;
 		}
 	}
+	@media (max-width:$mobileSmall) {
+      gap: 0;              
+                    
+	}
 }
