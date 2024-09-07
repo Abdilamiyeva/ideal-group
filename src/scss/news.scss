@@ -11,7 +11,7 @@
     gap: toRem(30);
     @media (min-width:0) {
         @include gridCards("fit", toRem(240), 1fr);
-        margin: 0 auto;
+      
     }
     @media (min-width: $tablet) {
         grid-template-columns: repeat(3, 1fr);
@@ -30,5 +30,9 @@
         font-weight: 400;
         max-width: toRem(447);
     }
+    @media (min-width:0) {
+      @include gridCards("fit", toRem(240), 1fr);
+      margin: 0 auto;
+  }
   }
 }
