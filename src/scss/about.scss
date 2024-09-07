@@ -47,7 +47,12 @@
             margin: 0 auto;
             background: url("@img/about__bg.png") 0 0 no-repeat;
             @include adaptiveValue("margin-bottom",63, 24);
-
+           
+            @media (max-width:$mobile) {
+                flex-wrap: wrap;
+                justify-content: center;
+                background: none;
+            }
         }       
         &__card{
             display: flex;
