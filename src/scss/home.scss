@@ -69,6 +69,7 @@
     background-color: $black_1;
     &--first {
         background: url("@img/form-bg-1.jpg") 0 0 no-repeat;
+        background-size: cover;
         background-color: $black_1;
     }
 

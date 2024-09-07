@@ -1,113 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/_head.htm',{ "title":" О компании",
-  "description":"Здесь будет мета описание страницы" })
+  @@include('html/_head.htm',{ "title":" О компании", "description":"Здесь будет
+  мета описание страницы" })
 
   <body>
     <div class="wrapper">
       @@include('html/_header.htm', {})
-        <div class="about">
-            <div class="about__container">
-                <div class="catalog__links">
-                    <a class="catalog__link active" href="#">Главная</a>
-                    <a class="catalog__link" href="#">/</a>
-                    <a class="catalog__link" href="#">О компании</a>
-                </div>
-                <h2 class="about__title">О компании</h2>
-                <div class="about__card">
-                    <div class="about__card__information">
-                        <p class="about__card__information__text">Мы рады приветствовать вас на сайте нашей компании.</p>
-                        <p class="about__card__information__text">Мы являемся молодой быстрорастущей компанией.</p>
-                        <p class="about__card__information__text"> Компания специализируется на продаже стоматологических имплантатов известных брендов.</p>
-                        <p class="about__card__information__text">На данный момент мы представляем собой компанию, владеющую интернет–магазином, отдел продаж, службу доставки, штат квалифицированных специалистов, собственный склад c постоянным наличием необходимого запаса товаров.</p>
-                        <p class="about__card__information__text">За это время у нас сложились партнерские отношения с ведущими производителями, позволяющие предлагать высококачественную продукцию по конкурентоспособным ценам.</p>
-                        <p class="about__card__information__text">Мы можем гордиться тем, что у нас один из самых широких ассортиментов.</p>
-                    </div>
-                    <div class="about__card__img">
-                        <img src="@img/about__img.png" alt="Image">
-                    </div>
-                </div>
-                <div class="about__main__section">
-                    <h3 class="about__main__section__title">Почему стоит выбрать именно нас</h3>
-                    <div class="about__main__section__cards">
-                        <div class="about__main__section__card">
-                            <div class="about__main__section__card__image">
-                                <img src="@img/about__img1.svg" alt="Image">
-                            </div>
-                            <p class="about__main__section__card__title">Товары премиального качества</p>
-                        </div>
-                        <div class="about__main__section__card">
-                            <div class="about__main__section__card__image">
-                                <img src="@img/about__img2.svg" alt="Image">
-                            </div>
-                            <p class="about__main__section__card__title">Товары премиального качества</p>
-                        </div>
-                        <div class="about__main__section__card">
-                            <div class="about__main__section__card__image">
-                                <img src="@img/about__img3.svg" alt="Image">
-                            </div>
-                            <p class="about__main__section__card__title">Товары премиального качества</p>
-                        </div>
-                        <div class="about__main__section__card">
-                            <div class="about__main__section__card__image">
-                                <img src="@img/about__img4.svg" alt="Image">
-                            </div>
-                            <p class="about__main__section__card__title">Товары премиального качества</p>
-                        </div>
-                    </div>
-                    <p class="about__main__section__bottom__text">Мы всегда рады общению с нашими клиентами.  <br>
-                        Если у вас есть какие-либо пожелания, предложения, замечания, касающиеся работы нашего Интернет-магазина - пишите нам, и мы с благодарностью примем ваше мнение во внимание.</p>
-                </div>
+      <div class="about">
+        <div class="about__container">
+          <div class="catalog__links">
+            <a class="catalog__link active" href="#">Главная</a>
+            <a class="catalog__link" href="#">/</a>
+            <a class="catalog__link" href="#">О компании</a>
+          </div>
+          <h2 class="about__title">О компании</h2>
+          <div class="about__card">
+            <div class="about__card__information">
+              <p class="about__card__information__text">
+                Мы рады приветствовать вас на сайте нашей компании.
+              </p>
+              <p class="about__card__information__text">
+                Мы являемся молодой быстрорастущей компанией.
+              </p>
+              <p class="about__card__information__text">
+                Компания специализируется на продаже стоматологических
+                имплантатов известных брендов.
+              </p>
+              <p class="about__card__information__text">
+                На данный момент мы представляем собой компанию, владеющую
+                интернет–магазином, отдел продаж, службу доставки, штат
+                квалифицированных специалистов, собственный склад c постоянным
+                наличием необходимого запаса товаров.
+              </p>
+              <p class="about__card__information__text">
+                За это время у нас сложились партнерские отношения с ведущими
+                производителями, позволяющие предлагать высококачественную
+                продукцию по конкурентоспособным ценам.
+              </p>
+              <p class="about__card__information__text">
+                Мы можем гордиться тем, что у нас один из самых широких
+                ассортиментов.
+              </p>
             </div>
-        </div>
-        <div class="callback callback--first">
-            <div class="callback__container">
-                <form class="callback__form form">
-                    <h3 class="form__title">Появились вопросы?</h3>
-                    <div class="form__subtitle">Оставьте заявку и наш специалист свяжется с вами в ближайшее время
-                    </div>
-                    <div class="form__row">
-                        <div class="form__input">
-                            <label>Имя*</label>
-                            <input autocomplete="off" type="text" name="form[name]" data-error="Обязательное поле"
-                                placeholder="" class="input">
-                        </div>
-                        <div class="form__input">
-                            <label>Телефон*</label>
-                            <input autocomplete="off" type="tel" name="form[phone]" data-error="Обязательное поле"
-                                placeholder="+7 (___) ___-__-__" class="input">
-                        </div>
-                    </div>
-                    <a href="#" class="form__privacy">*Политика конфиденциальности персональных данных</a>
-                    <button type="submit" class="button button--gold">Получить консультацию</button>
-                </form>
+            <div class="about__card__img">
+              <img src="@img/about__img.png" alt="Image" />
             </div>
+          </div>
+          <div class="about__main__section">
+            <h3 class="about__main__section__title">
+              Почему стоит выбрать именно нас
+            </h3>
+            <div class="about__main__section__cards">
+              <div class="about__main__section__card">
+                <div class="about__main__section__card__image">
+                  <img src="@img/about__img1.svg" alt="Image" />
+                </div>
+                <p class="about__main__section__card__title">
+                  Товары премиального качества
+                </p>
+              </div>
+              <div class="about__main__section__card">
+                <div class="about__main__section__card__image">
+                  <img src="@img/about__img2.svg" alt="Image" />
+                </div>
+                <p class="about__main__section__card__title">
+                  Товары премиального качества
+                </p>
+              </div>
+              <div class="about__main__section__card">
+                <div class="about__main__section__card__image">
+                  <img src="@img/about__img3.svg" alt="Image" />
+                </div>
+                <p class="about__main__section__card__title">
+                  Товары премиального качества
+                </p>
+              </div>
+              <div class="about__main__section__card">
+                <div class="about__main__section__card__image">
+                  <img src="@img/about__img4.svg" alt="Image" />
+                </div>
+                <p class="about__main__section__card__title">
+                  Товары премиального качества
+                </p>
+              </div>
+            </div>
+            <p class="about__main__section__bottom__text">
+              Мы всегда рады общению с нашими клиентами. <br />
+              Если у вас есть какие-либо пожелания, предложения, замечания,
+              касающиеся работы нашего Интернет-магазина - пишите нам, и мы с
+              благодарностью примем ваше мнение во внимание.
+            </p>
+          </div>
         </div>
-        <div class="address">
-            <div class="address__container">
-                    <div class="address__card">
-                        <h4>Адрес магазина:<span> Москва. ул. Жебрунова д.6 стр. 1 офис 351</span></h4>
-                        <p><span>Телефон:</span>  +7 (499) 288-80-18</p>
-                        <p><span>E-mail: </span> info@idealgrupp.ru</p>
-                    </div>
-                    <div class="address__card">
-                        <h4>Наши реквизиты:</h4>
-                        <ul>
-                            <li>ООО "ИДЕАЛ ГРУПП"</li>
-                            <li>ИНН: 9725147014</li>
-                            <li> ОГРН: 1247700026397</li>
-                        </ul>
-                    </div>
-                    <div class="address__card">
-                        <h4>Режим работы:</h4> <br>
-                        <div class="work__hours">
-                           <span> Пн - Пт: 10.00 - 18.00</span>
-                           <span>Сб - Вс: выходной</span>
-                        </div>
-                    </div>
-        </div>
-        </div>
-        @@include('html/_footer.htm', {})  
       </div>
-      @@include('html/_js.htm',{})
+      <div class="callback callback--first">
+        <div class="callback__container">
+          <form class="callback__form form">
+            <h3 class="form__title">Появились вопросы?</h3>
+            <div class="form__subtitle">
+              Оставьте заявку и наш специалист свяжется с вами в ближайшее время
+            </div>
+            <div class="form__row">
+              <div class="form__input">
+                <label>Имя*</label>
+                <input
+                  autocomplete="off"
+                  type="text"
+                  name="form[name]"
+                  data-error="Обязательное поле"
+                  placeholder=""
+                  class="input"
+                />
+              </div>
+              <div class="form__input">
+                <label>Телефон*</label>
+                <input
+                  autocomplete="off"
+                  type="tel"
+                  name="form[phone]"
+                  data-error="Обязательное поле"
+                  placeholder="+7 (___) ___-__-__"
+                  class="input"
+                />
+              </div>
+            </div>
+            <a href="#" class="form__privacy"
+              >*Политика конфиденциальности персональных данных</a
+            >
+            <button type="submit" class="button button--gold">
+              Получить консультацию
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="address">
+        <div class="address__container">
+          <div class="address__card">
+            <h4>
+              Адрес магазина:<span>
+                Москва. ул. Жебрунова д.6 стр. 1 офис 351</span
+              >
+            </h4>
+            <p><span>Телефон:</span> +7 (499) 288-80-18</p>
+            <p><span>E-mail: </span> info@idealgrupp.ru</p>
+          </div>
+          <div class="address__card">
+            <h4>Наши реквизиты:</h4>
+            <ul>
+              <li>ООО "ИДЕАЛ ГРУПП"</li>
+              <li>ИНН: 9725147014</li>
+              <li>ОГРН: 1247700026397</li>
+            </ul>
+          </div>
+          <div class="address__card">
+            <h4>Режим работы:</h4>
+            <br />
+            <div class="work__hours">
+              <span> Пн - Пт: 10.00 - 18.00</span>
+              <span>Сб - Вс: выходной</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('html/_footer.htm', {})
+    </div>
+    @@include('html/_js.htm',{})
   </body>
+</html>

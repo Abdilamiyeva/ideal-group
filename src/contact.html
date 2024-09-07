@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":" Контакты",
+  "description":"Здесь будет мета описание страницы" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm', {})
+        
+        <div class="contact">
+            <div class="contact__container">
+                <div class="catalog__links">
+                    <a class="catalog__link active" href="#">Главная</a>
+                    <a class="catalog__link" href="#">/</a>
+                    <a class="catalog__link" href="#">О компании</a>
+                </div>
+                <h2 class="contact__title">
+                    Контакты
+                </h2>
+                <div class="contact__card">
+                    <div class="contact__card__information">
+                         <p class="contact__card__information__text">Адрес магазина:<span>Москва. ул. Жебрунова д.6 стр. 1 офис 351</span> </p>
+                         <p class="contact__card__information__text">Телефон:<span>+7 (499) 288-80-18</span></p>
+                         <p class="contact__card__information__text">E-mail:<span>info@idealgrupp.ru</span> </p>
+                         <div class="contact__card__information__icons">
+                            <span>Мы в соц. сетях: </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+                                <path d="M16.1542 3.76094C14.3772 1.97969 12.0107 1 9.49576 1C4.30469 1 0.0805804 5.22411 0.0805804 10.4152C0.0805804 12.0734 0.51317 13.6935 1.33594 15.1228L0 20L4.99174 18.6895C6.36585 19.4402 7.91384 19.8346 9.49152 19.8346H9.49576C14.6826 19.8346 19 15.6105 19 10.4194C19 7.90446 17.9312 5.54219 16.1542 3.76094ZM9.49576 18.2484C8.08772 18.2484 6.70937 17.871 5.50915 17.1585L5.225 16.9888L2.26473 17.765L3.05357 14.8768L2.86696 14.5799C2.08237 13.333 1.67098 11.8953 1.67098 10.4152C1.67098 6.10201 5.18259 2.5904 9.5 2.5904C11.5908 2.5904 13.5545 3.40469 15.0304 4.88482C16.5062 6.36495 17.4138 8.32857 17.4096 10.4194C17.4096 14.7368 13.8089 18.2484 9.49576 18.2484ZM13.7877 12.3873C13.5545 12.2685 12.3967 11.7002 12.1804 11.6239C11.9641 11.5433 11.8071 11.5051 11.6502 11.7426C11.4933 11.9801 11.0437 12.506 10.9038 12.6672C10.7681 12.8241 10.6281 12.8453 10.3949 12.7266C9.01228 12.0353 8.10469 11.4924 7.19286 9.92745C6.95112 9.51183 7.4346 9.54152 7.88415 8.64241C7.96049 8.48549 7.92232 8.34978 7.86295 8.23103C7.80357 8.11228 7.33281 6.95446 7.13772 6.48371C6.94688 6.02567 6.75179 6.08929 6.60759 6.0808C6.47187 6.07232 6.31495 6.07232 6.15804 6.07232C6.00112 6.07232 5.74665 6.1317 5.53036 6.36495C5.31406 6.60246 4.70759 7.17076 4.70759 8.32857C4.70759 9.48638 5.55156 10.606 5.66607 10.7629C5.78482 10.9199 7.32433 13.2949 9.68661 14.317C11.1795 14.9616 11.7647 15.0167 12.5112 14.9065C12.965 14.8386 13.9022 14.3382 14.0973 13.7868C14.2924 13.2355 14.2924 12.7647 14.233 12.6672C14.1779 12.5612 14.021 12.5018 13.7877 12.3873Z" fill="#1C1C1C"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+                                <path d="M17.6601 1.11987L0.463401 11.0409C-0.208144 11.4268 -0.122809 12.3617 0.545025 12.6437L4.48896 14.2985L15.1483 4.90426C15.3524 4.72246 15.6418 5.00073 15.4674 5.21221L6.52956 16.1016V19.0883C6.52956 19.9639 7.58697 20.309 8.1064 19.6745L10.4624 16.8066L15.0853 18.7433C15.6121 18.9659 16.2132 18.6357 16.3096 18.068L18.981 2.03999C19.1071 1.29054 18.302 0.748847 17.6601 1.11987Z" fill="#1C1C1C"/>
+                            </svg>
+                         </div>
+                         <div>
+                            <p class="contact__card__information__text">Наши реквизиты:</p>
+                            <ul>
+                                <li>ООО "ИДЕАЛ ГРУПП"</li>
+                                <li>  ИНН: 9725147014</li>
+                                <li>ОГРН: 1247700026397</li>
+                            </ul>
+                         </div>
+                         <p class="contact__card__information__text">
+                            Режим работы: <br>
+                            <span class="work__time">Пн - Пт: 10.00 - 18.00</span> <br>
+                            <span class="work__time">Сб - Вс: выходной</span>
+                         </p>
+                    </div>
+                    <div class="contact__img">
+                        <img src="@img/map.png" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="callback callback--first" style="margin-bottom: 10px;">
+            <div class="callback__container">
+                <form class="callback__form form">
+                    <h3 class="form__title">Задать вопрос</h3>
+                    <div class="form__subtitle">Оставьте заявку и наш специалист свяжется с вами в ближайшее время
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label>Имя*</label>
+                            <input autocomplete="off" type="text" name="form[name]" data-error="Обязательное поле"
+                                placeholder="" class="input">
+                        </div>
+                        <div class="form__input">
+                            <label>E mail*</label>
+                            <input autocomplete="off" type="email" name="form[name]" data-error="Обязательное поле"
+                                placeholder="" class="input">
+                        </div>
+                        
+                    </div>
+                    <div  class="form__input" style="margin-bottom: 30px;">
+                        <label>Сообщение</label>
+                        <input autocomplete="off" type="email" name="form[name]" data-error="Обязательное поле"
+                            placeholder="" class="input" style="padding-bottom: 50px;">
+                    </div>
+                    <a href="#" class="form__privacy">*Политика конфиденциальности персональных данных</a>
+                    <button type="submit" class="button button--gold">Получить консультацию</button>
+                </form>
+            </div>
+        </div>
+      @@include('html/_footer.htm', {})  
+    </div>
+    @@include('html/_js.htm',{})
+</body>

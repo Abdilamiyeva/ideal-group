@@ -1,0 +1,85 @@
+.implant{
+    &__container{
+        padding-top: toRem(30);
+        @include adaptiveValue("padding-bottom",60,24)
+    }
+    &__card{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: toRem(35);
+        flex-wrap: wrap;
+        @include adaptiveValue("margin-bottom",60,24);
+        &__info{
+            &__title{
+                max-width:toRem(444);
+                @extend %body_4;
+                margin-bottom: toRem(10);
+            }
+            &__image{
+                width:toRem(216);
+                margin-bottom: toRem(50);
+                img{
+                    max-width: max-content;
+                }
+            }
+            &__text{
+                @extend %body_5;
+                max-width:toRem(444);
+
+            }
+        }
+    }
+    &__bottom__content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: toRem(151);
+        &__inner{
+            h4{
+                color: $goldDark;
+                margin-bottom: toRem(27);
+                display: flex;
+                align-items: center;
+               @extend %body_6;
+               svg{
+                display: inline-block;
+               }
+            }
+            ul {
+                margin-bottom: toRem(33);
+                margin-left: toRem(20);
+                max-width: toRem(565);
+                li{
+                    list-style: disc;
+                    @extend %body_5;
+                }
+            }
+            h3{
+                margin-bottom: toRem(10);
+                @extend %body_4;
+            }
+            p{
+                max-width: toRem(565);
+                margin-bottom: toRem(10);
+                @extend %body_5;
+            }
+        }
+        &__title{
+            font-size: toRem(24);
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: toRem(42);
+            @media (min-width:0) and (max-width:$tablet) {
+                text-align: center;
+            }
+        }
+        @media (min-width:$pc) {
+            gap: toRem(151);
+        }
+        @media (min-width:0) and (max-width:$tablet) {
+            justify-content: center;
+            gap: toRem(50);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.news{
+  &__container{
+    padding-top: toRem(30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+  }
+  &__title{
+  }  
+  &__cards{
+    display: flex;
+    justify-content: center;
+    gap: toRem(30);
+    @media (min-width:0) {
+        @include gridCards("fit", toRem(240), 1fr);
+        margin: 0 auto;
+    }
+    @media (min-width: $tablet) {
+        grid-template-columns: repeat(3, 1fr);
+        @include adaptiveValue("column-gap", 29, 20);
+        @include adaptiveValue("row-gap", 29, 20);
+    }
+  }
+  &__card{
+    &__date{
+        font-size: toRem(12);
+        font-weight: 400;
+        margin-bottom: toRem(15);
+    }
+    &__info{
+        font-size: toRem(13);
+        font-weight: 400;
+        max-width: toRem(447);
+    }
+  }
+}
