@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage",
+"description":"Здесь будет мета описание страницы"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+        <div class="order">
+            <div class="order__container">
+                <h2> product -1 </h2>
+                <div class="order__accordion--content order__accordion--content--1 active">
+                     <h1>hell -1</h1>
+                    <button class="order__accordion--content__next--btn">Далее</button>
+                </div>
+                <h2> product -2 </h2>
+                <div class="order__accordion--content order__accordion--content--2">
+                    <h1>hell -2</h1>
+                    <button  class="order__accordion--content__next--btn">Далее</button>
+                </div>
+                <h2> product -3 </h2>
+                <div class="order__accordion--content order__accordion--content--3">
+                    <h1>hell -3</h1>
+                    <button  class="order__accordion--content__next--btn">Далее</button>
+                </div>
+                <h2> product -4 </h2>
+                <div class="order__accordion--content order__accordion--content--4">
+                    <h1>hell -4</h1>
+                    <button  class="order__accordion--content__next--btn">Далее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
+
