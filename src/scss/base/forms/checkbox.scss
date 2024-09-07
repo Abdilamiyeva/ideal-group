@@ -39,7 +39,7 @@ $scale-factor: 1.03;
     border-radius: $border-radius;
     cursor: pointer;
     transition: all 0.2s ease;
-	vertical-align:middle;
+	  vertical-align:middle;
 
   }
   .check__title{
@@ -47,6 +47,7 @@ $scale-factor: 1.03;
 	color: $black_1;
 	font-weight: 400;
 	display: inline;
+  cursor: pointer;
   }
 
   input + label:active {

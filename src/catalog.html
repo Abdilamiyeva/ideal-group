@@ -1,69 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{ "title":"Catalog", "description":"Здесь будет мета описание страницы" })
-
-<body>
-  <div class="wrapper">
-     @@include('html/_header.htm', {})
-     <section id="catalog" data-tabs class="categories">
+  @@include('html/_head.htm',{ "title":"Catalog", "description":"Здесь будет
+  мета описание страницы" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm', {})
+      <section id="catalog" data-tabs class="categories">
         <div class="categories__container">
-            <div class="catalog__links">
-                <a class="catalog__link active" href="#">Главная</a>
-                <a class="catalog__link" href="#">/</a>
-                <a class="catalog__link" href="#">Каталог</a>
+          <div class="catalog__links">
+            <a class="catalog__link active" href="#">Главная</a>
+            <a class="catalog__link" href="#">/</a>
+            <a class="catalog__link" href="#">Каталог</a>
+          </div>
+          <h2 class="catalog__section-title">Каталог</h2>
+          <div data-tabs-body class="categories__content">
+            <div class="categories__body">
+              <div class="categories__list">
+                @@include('html/_category.htm',{ "image":"cat9.png", "title":
+                "Имплантационная система DIO" })
+                @@include('html/_category.htm',{ "image":"cat10.png", "title":
+                "Уход за полостью рта VOC" }) @@include('html/_category.htm',{
+                "image":"cat11.png", "title": "Инструменты и наборы" })
+                @@include('html/_category.htm',{ "image":"cat12.png", "title":
+                "Расходные материалы" })
+              </div>
             </div>
-            <h2 class="catalog__section-title">Каталог</h2>
-            
-            <div data-tabs-body class="categories__content">
-                <div class="categories__body">
-                    <div class="categories__list">
-                        @@include('html/_category.htm',{
-                        "image":"cat9.png",
-                        "title": "Имплантационная система DIO"
-                        })
-                        @@include('html/_category.htm',{
-                        "image":"cat10.png",
-                        "title": "Уход за полостью рта VOC"
-                        })
-                        @@include('html/_category.htm',{
-                        "image":"cat11.png",
-                        "title": "Инструменты и наборы"
-                        })
-                        @@include('html/_category.htm',{
-                        "image":"cat12.png",
-                        "title": "Расходные материалы"
-                        })
-        </div>                
-        </div>                
-            </div>
-            </div>
-     </section>
-     <div style="margin-bottom: 10px;" class="callback callback--first">
-        <div class="callback__container">
-            <form class="callback__form form">
-                <h3 class="form__title">Появились вопросы?</h3>
-                <div class="form__subtitle">Оставьте заявку и наш специалист свяжется с вами в ближайшее время
-                </div>
-                <div class="form__row">
-                    <div class="form__input">
-                        <label>Имя*</label>
-                        <input autocomplete="off" type="text" name="form[name]" data-error="Обязательное поле"
-                            placeholder="" class="input">
-                    </div>
-                    <div class="form__input">
-                        <label>Телефон*</label>
-                        <input autocomplete="off" type="tel" name="form[phone]" data-error="Обязательное поле"
-                            placeholder="+7 (___) ___-__-__" class="input">
-                    </div>
-                </div>
-                <a href="#" class="form__privacy">*Политика конфиденциальности персональных данных</a>
-                <button type="submit" class="button button--gold">Получить консультацию</button>
-            </form>
+          </div>
         </div>
+      </section>
+      <div style="margin-bottom: 10px;" class="callback callback--first">
+        <div class="callback__container">
+          <form class="callback__form form">
+            <h3 class="form__title">Появились вопросы?</h3>
+            <div class="form__subtitle">
+              Оставьте заявку и наш специалист свяжется с вами в ближайшее время
+            </div>
+            <div class="form__row">
+              <div class="form__input">
+                <label>Имя*</label>
+                <input
+                  autocomplete="off"
+                  type="text"
+                  name="form[name]"
+                  data-error="Обязательное поле"
+                  placeholder=""
+                  class="input"
+                />
+              </div>
+              <div class="form__input">
+                <label>Телефон*</label>
+                <input
+                  autocomplete="off"
+                  type="tel"
+                  name="form[phone]"
+                  data-error="Обязательное поле"
+                  placeholder="+7 (___) ___-__-__"
+                  class="input"
+                />
+              </div>
+            </div>
+            <a href="#" class="form__privacy"
+              >*Политика конфиденциальности персональных данных</a
+            >
+            <button type="submit" class="button button--gold">
+              Получить консультацию
+            </button>
+          </form>
+        </div>
+      </div>
+      @@include('html/_footer.htm', {})
     </div>
-    @@include('html/_footer.htm', {})
-  </div>
-  @@include('html/_js.htm',{})
-</body>
-
+    @@include('html/_js.htm',{})
+  </body>
 </html>

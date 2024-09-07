@@ -1,0 +1,123 @@
+
+.about{
+    &__container{
+        padding-top: toRem(30);
+    }
+    &__title{
+        color: $mainColor;
+        text-transform: uppercase;
+        border-bottom: 2px solid $mainColor;
+        padding-bottom: toRem(20);
+        @extend %heading_3;
+        @include adaptiveValue("margin-top",60, 24);
+    }
+    &__card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(30);
+        @include adaptiveValue("margin-top",60, 24);
+        
+        &__information{
+            &__text{
+                font-size: toRem(16);
+                font-weight: 400;
+                color: $mainColor;
+                max-width: toRem(520);
+                margin-bottom: toRem(15);
+            }
+        }
+        @media (min-width:0) and (max-width:$tablet) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__main__section{
+        @include adaptiveValue("margin-top",61, 24);
+        &__title{
+            color: $mainColor;
+            text-transform: uppercase;
+            text-align: center;
+            @extend %heading_3;
+            @include adaptiveValue("margin-bottom",61, 24);
+        }
+        &__cards{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            background: url("@img/about__bg.png") 0 0 no-repeat;
+            @include adaptiveValue("margin-bottom",63, 24);
+
+        }       
+        &__card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &__image{
+                width: toRem(130);
+                margin-bottom: toRem(29);
+            }
+            &__title{
+                font-size: toRem(14);
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+        &__bottom__text{
+            color:$mainColor;
+            text-align: center;
+            font-size: toRem(24);
+            font-weight: 500;
+            text-transform: uppercase;
+            max-width: toRem(1400px);
+            @include adaptiveValue("margin-bottom",60, 24);
+            
+        }
+    }
+}
+.address{
+    margin-top: toRem(-40);
+    @include adaptiveValue("margin-bottom",60, 24);
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: toRem(30);
+    }
+    &__card{
+        h4{
+            font-size: toRem(16);
+            font-weight: 500;
+            margin-bottom: toRem(10);
+            span{
+                font-weight: 400;
+            }
+        }
+        p{
+            font-size: toRem(16);
+            font-weight: 400;
+            margin-bottom: toRem(10);
+            span{
+                font-weight: 500;
+            }
+        }
+        ul {
+            li{
+                list-style: disc;
+                font-size: toRem(16);
+                font-weight: 400;
+                margin-left: toRem(10);
+            }
+        }
+        .work__hours{
+            display: flex;
+            gap: toRem(30);
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+}

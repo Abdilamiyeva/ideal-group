@@ -174,7 +174,7 @@ body {
 @import "intro";
 @import "category";
 @import "category-row";
-@import "product";
+@import "product-card";
 @import "base/pagging";
 @import "base";
 
@@ -182,4 +182,6 @@ body {
 @import "home";
 @import "catalog";
 @import "system";
-
+@import "product";
+@import "basket";
+@import "about";

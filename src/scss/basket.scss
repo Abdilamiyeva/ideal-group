@@ -1,0 +1,231 @@
+.wrapper{
+    .basket{
+        &__container{
+
+        }
+        &__cards{
+            @media (min-width:0) and (max-width:$mobile) {
+                width: 100%;
+            }
+        }
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            &__right{
+                border-radius: toRem(6);
+                border: 1px solid #D9D9D9;
+                background: $grey;
+                padding: toRem(30) toRem(15);
+                &__button{
+                    font-size: toRem(15);
+                    font-weight: 500;
+                    text-align: center;
+                    padding: toRem(11) toRem(30);
+                    border-radius: toRem(30);
+                    background: $gold;
+                    cursor: pointer;
+                    max-width: toRem(417);
+                    margin-bottom: toRem(15);
+                    transition: all 0.25s ease;
+                    &:hover{
+                        background: $goldDark;
+                        color: white;
+                    }
+                }
+                &__info{
+                    font-size: toRem(12);
+                    margin-bottom: toRem(15);
+                    max-width: toRem(417);
+                    font-weight: 400;
+                }
+                &__title{
+                    font-size: toRem(20);
+                    font-weight: 500;
+                    margin-bottom: toRem(20);
+                }
+                &__sale{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: toRem(20);
+                    span{
+                        font-size: toRem(14);
+                        font-weight: 500;
+                    
+                    }
+                }
+                &all__money{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        font-weight: 500;
+                        font-size: toRem(20);
+                        color: $mainColor;
+                    }
+                }
+
+            }
+            @media (min-width:0) and (max-width:$pc) {
+                flex-direction: column-reverse;
+            }
+        }
+        &__all__select__btn{
+            border-radius: toRem(6);
+            background:$grey;
+            display: flex;
+            align-items: center;
+            margin-bottom: toRem(5);
+            .checkbox-wrapper{
+                padding: toRem(7) toRem(10);
+                margin-bottom: 0 !important;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: toRem(10);
+               
+             }
+        }
+        &__card{
+            border: 1px solid #D9D9D9;
+            padding-top:toRem(10) ;
+            border-radius: toRem(6);
+            padding-bottom:toRem(10) ;
+            &__section{
+                display: flex;
+                align-items: center;
+                @include adaptiveValue("gap", 30, 20);
+
+                &--rigth{
+                    display: flex;
+                    align-items: center;
+                    @include adaptiveValue("gap", 30, 20);
+                    .price{
+                        font-size: toRem(14);
+                        font-weight: 500;
+                        white-space: nowrap;
+                    }
+                    .counter{
+                        display: flex;
+                        gap: toRem(10);
+                        align-items: center;
+                        margin-right: toRem(10);
+                        .inc, .dec{
+                            padding: toRem(11) toRem(16);
+                            border-radius: toRem(4);
+                            border: 1px solid #D9D9D9;
+                            font-weight: 500;
+                            font-size: toRem(15);
+                            transition: all .25s ease;
+                            background: $grey;
+                           &:hover{
+                            background: $gold;
+                               
+                           }
+                           &.active{
+                            background: $gold;
+                           }
+                        }
+                        input{
+                            border-radius: toRem(4);
+                            width: 60px;
+                            border: 1px solid #D9D9D9;
+                            padding: toRem(10) toRem(26);
+                            color: $mainColor;
+                        }
+                    }  
+                    @media (min-width:0) and (max-width:$mobile) {
+                        flex-direction: column;
+                    }
+                }
+                @media (min-width:0) and (max-width:$pcSmall) {
+                    flex-direction: column;
+                    
+                }
+            }
+            .checkbox-wrapper{
+                padding: toRem(7) toRem(10);
+                margin-bottom: 0 !important;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: toRem(45);
+                .check__title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: toRem(48);
+                    span{
+                        max-width: toRem(461);
+                        font-weight: 500;
+                        font-size: toRem(14);
+                        text-decoration: underline;
+                        @media (min-width:0) and (max-width:$mobile) {
+                            max-width: toRem(201);
+                            line-height: normal;
+                        }
+                    }
+                    .img{
+                         width: 50px;
+                         img{
+                             max-width: max-content ;
+                         }
+                    }
+                    @media (min-width:0) and (max-width:$mobile) {
+                        gap: toRem(10);
+                    }
+                }
+                @media (min-width:0) and (max-width:$mobile) {
+                gap: toRem(20);
+                }
+             }
+            &__icons{
+                margin-top: toRem(11);
+                margin-left: toRem(135);
+                display: flex;
+                gap: toRem(20);
+                svg{
+                    path{
+                        transition: all .2s ease;
+                    }
+                    &:hover path{
+                        fill: $gold;
+                        stroke: $gold;
+
+                    }
+                }
+            }
+            &__coupon__code{
+                margin-top: toRem(39);
+                margin-bottom: toRem(5);
+                &__title{
+                    font-size: toRem(12);
+                    color: #999;
+                    font-weight: 400;
+                }
+                &__input{
+                    position: relative;
+                    max-width: toRem(452);
+                    height: toRem(40);
+                    padding-left: toRem(10);
+                    border-radius: toRem(6);
+                    border: 1px solid #D9D9D9;
+                    .inp{
+                        width: 98%;
+                        height: 100%;
+                    }
+                    svg{
+                        position: absolute;
+                        right: toRem(10);
+                        top: toRem(17);
+                    }
+                }
+            }
+              
+        }
+       
+    }
+
+}
