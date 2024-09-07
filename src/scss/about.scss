@@ -51,6 +51,7 @@
             @media (max-width:$mobile) {
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: toRem(15);
                 background: none;
             }
         }       
