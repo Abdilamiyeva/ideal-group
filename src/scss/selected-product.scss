@@ -1,0 +1,40 @@
+.wrapper{
+    .selectedProduct{
+        &__container{
+    
+        }
+        &__cards{
+            display: flex;
+            gap: toRem(30);
+            overflow-x: auto;
+            @media (min-width: $mobileSmall) {
+                @include gridCards("fit", toRem(240), 1fr);           
+            }
+            @media (min-width: $tablet) {
+                grid-template-columns: repeat(4, 1fr);
+                @include adaptiveValue("column-gap", 30, 30);
+                @include adaptiveValue("row-gap", 30, 20);
+            }
+           
+        }
+        &__card{
+            @media (min-width: $mobileSmall) {
+                margin: 0 auto; 
+            }
+        }
+        &__title{
+            font-size: toRem(24);
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            @include adaptiveValue("margin-top",60,24);
+            @include adaptiveValue("margin-bottom",57,24);
+    
+        }
+    
+    }
+    #swiper{
+        height: 540px;
+        @include adaptiveValue("margin-bottom",60,24)
+    }
+}
