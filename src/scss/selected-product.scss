@@ -1,7 +1,7 @@
 .wrapper{
     .selectedProduct{
         &__container{
-    
+            padding-top: toRem(30);
         }
         &__cards{
             display: flex;
@@ -34,7 +34,6 @@
     
     }
     #swiper{
-        height: 540px;
         @include adaptiveValue("margin-bottom",60,24)
     }
 }
