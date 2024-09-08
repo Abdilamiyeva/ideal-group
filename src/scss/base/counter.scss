@@ -1,0 +1,28 @@
+.counter{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        border-radius: toRem(4);
+        border: 1px solid #D9D9D9;
+    }
+    &__decrement--btn,&__increment--btn{
+        padding: toRem(11) toRem(16);
+        font-size: toRem(15);
+        font-weight: 500;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        &:hover{
+            background:$gold;
+        }
+    }   
+    &__btn--value{
+        font-size: toRem(15);
+        font-weight: 500;
+        width: 60px;
+        height: 40px;
+        text-align: center;
+    }
+    
+}

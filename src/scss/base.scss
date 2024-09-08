@@ -15,6 +15,7 @@
 @import "base/tabs";
 
 @import "base/accordion";
+@import "base/counter";
 // Стилі мап
 // @import "base/maps";
 
@@ -185,4 +186,11 @@
 	font-weight: 600;
 	font-size: toRem(18);
 }
-
+%body_7 {
+	font-weight: 500;
+	font-size: toRem(14);
+}
+%body_8 {
+	font-weight: 500;
+	font-size: toRem(15);
+}

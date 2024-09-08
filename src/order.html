@@ -1,40 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage",
+"title":"Оформление заказа",
 "description":"Здесь будет мета описание страницы"
-})
-
-<body>
-	<div class="wrapper">
-		@@include('html/_header.htm',{})
-        <div class="order">
-            <div class="order__container">
-                <h2> product -1 </h2>
-                <div class="order__accordion--content order__accordion--content--1 active">
-                     <h1>hell -1</h1>
-                    <button class="order__accordion--content__next--btn">Далее</button>
+    })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <div class="order">
+        <div class="order__container">
+            <div class="catalog__links">
+                <a class="catalog__link active" href="#">Главная</a>
+                <a class="catalog__link" href="#">/</a>
+                <a class="catalog__link active" href="#">Корзина</a>
+                <a class="catalog__link" href="#">/</a>
+                <a class="catalog__link" href="#">Оформление заказа</a>
+            </div>
+            <h2 class="product__section__title">
+                Оформление заказа
+            </h2>           
+            <div class="order__inner">
+                <div class="order__wrapper">
+                <div class="order__accordion">
+                    <div class="order__accordion__header">
+                    <span>1</span>
+                    <h3>Товары в заказе</h3>
+                    </div>
+                    <div
+                    class="order__accordion__content order__accordion__content--1 active"
+                    >
+                    <div class="order__accordion__content__card">
+                        <div class="order__accordion__content__card__img">
+                        <img src="@img/product_card_img.svg" alt="Image" />
+                        </div>
+                        <a class="order__accordion__content__card__title" href="#"
+                        >Имплантат винтообразный (UF (II) Fixture) диаметр 4.0 мм,
+                        длина 10 мм (UF(II) 4010SF)</a
+                        >
+                        <p class="order__accordion__content__card__number">1</p>
+                        <p class="order__accordion__content__card__price">
+                        5 300 ₽
+                        </p>
+                    </div>
+                    <div class="order__accordion__content__card">
+                        <div class="order__accordion__content__card__img">
+                        <img src="@img/product_card_img.svg" alt="Image" />
+                        </div>
+                        <a class="order__accordion__content__card__title" href="#"
+                        >Имплантат винтообразный (UF (II) Fixture) диаметр 4.0 мм,
+                        длина 10 мм (UF(II) 4010SF)</a
+                        >
+                        <p class="order__accordion__content__card__number">1</p>
+                        <p class="order__accordion__content__card__price">
+                        5 300 ₽
+                        </p>
+                    </div>
+                    <div
+                        class="basket__card__coupon__code"
+                        style="padding-left: 10px;"
+                    >
+                        <h4
+                        class="basket__card__coupon__code__title"
+                        style="margin-bottom: 5px;"
+                        >
+                        Применить купон
+                        </h4>
+                        <div class="basket__card__coupon__code__input">
+                        <input class="inp" type="text" />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="5"
+                            height="8"
+                            viewBox="0 0 5 8"
+                            fill="none"
+                        >
+                            <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0.480957L0 7.51908L5 3.98034L0 0.480957Z"
+                            fill="#999999"
+                            />
+                        </svg>
+                        </div>
+                    </div>
+                    <button class="order__accordion__content__next--btn">
+                        Далее
+                    </button>
+                    </div>
                 </div>
-                <h2> product -2 </h2>
-                <div class="order__accordion--content order__accordion--content--2">
-                    <h1>hell -2</h1>
-                    <button  class="order__accordion--content__next--btn">Далее</button>
+                <div class="order__accordion">
+                    <div class="order__accordion__header">
+                    <span>2</span>
+                    <h3>Регион доставки</h3>
+                    </div>
+                    <div
+                    class="order__accordion__content order__accordion__content--2"
+                    >
+                    <div class="order__accordion__content__delivery__cards">
+                        <label
+                        for="check__1"
+                        class="order__accordion__content__delivery__card"
+                        >
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="check__1" />
+                            <label for="check__1">
+                            <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                            </label>
+                        </div>
+                        <div
+                            class="order__accordion__content__delivery__card__content"
+                        >
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="38"
+                            height="40"
+                            viewBox="0 0 38 40"
+                            fill="none"
+                            >
+                            <path
+                                d="M0.497178 10.4706L17.7693 20.2576C18.0672 20.429 18.4345 20.429 18.7325 20.2576L36.0127 10.4706C36.6943 10.0829 36.6698 9.09519 35.9678 8.7442L18.6916 0.104073C18.4141 -0.0346911 18.0917 -0.0346911 17.8142 0.104073L0.542073 8.74012C-0.155831 9.09111 -0.1844 10.0829 0.497178 10.4706ZM1.46445 8.76461L1.41955 10.491L18.6916 1.85495H17.8142L35.0863 10.491L35.0414 8.76461L17.7733 18.5557H18.7365L1.46445 8.76461Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M17.2754 20.2127V39.0194C17.2754 39.7703 18.0835 40.2397 18.7365 39.8723L37.1595 29.4691C37.4656 29.2936 37.6574 28.9712 37.6574 28.6161V15.9518C37.6574 15.4131 37.2207 14.9723 36.6779 14.9723C36.1351 14.9723 35.6984 15.409 35.6984 15.9518V28.6202L36.1963 27.7672L17.7733 38.1664L19.2344 39.0194V20.2127C19.2344 19.674 18.7977 19.2332 18.2549 19.2332C17.7121 19.2332 17.2754 19.6699 17.2754 20.2127Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M18.7618 38.1785L1.4856 27.7794L1.95903 28.616V10.193C1.95903 9.65428 1.52233 9.2135 0.979514 9.2135C0.440781 9.2135 0 9.6502 0 10.193V28.6201C0 28.9629 0.179578 29.2813 0.473432 29.4568L17.7455 39.856C18.2067 40.1335 18.8107 39.9866 19.0883 39.5213C19.374 39.0601 19.223 38.4601 18.7618 38.1785Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M5.08591 17.9435L10.8446 21.3963C11.3099 21.6738 11.9099 21.5228 12.1874 21.0616C12.4649 20.5963 12.3139 19.9964 11.8527 19.7189L6.09399 16.2661C5.62872 15.9885 5.02877 16.1395 4.75124 16.6007C4.46963 17.0619 4.62064 17.666 5.08591 17.9435Z"
+                                fill="black"
+                            />
+                            </svg>
+                            <span
+                            class="order__accordion__content__delivery__card__content__title"
+                            >Доставка курьером</span
+                            >
+                            <br />
+                            <span
+                            class="order__accordion__content__delivery__card__content__price"
+                            >500 ₽</span
+                            >
+                        </div>
+                        </label>
+                        <label
+                        for="check__2"
+                        class="order__accordion__content__delivery__card"
+                        >
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="check__2" />
+                            <label for="check__2">
+                            <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                            </label>
+                        </div>
+                        <div
+                            class="order__accordion__content__delivery__card__content"
+                        >
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="41"
+                            height="30"
+                            viewBox="0 0 41 30"
+                            fill="none"
+                            >
+                            <path
+                                d="M39.5459 20.4547H16.0822C15.7743 20.4547 15.4755 20.3506 15.2344 20.1592C14.9932 19.9678 14.8239 19.7004 14.754 19.4006L10.719 2.10746C10.5791 1.50803 10.2406 0.973539 9.75839 0.590904C9.27623 0.208269 8.67881 -7.81925e-06 8.06327 -6.10352e-05H1.36365C1.00199 -6.10352e-05 0.655138 0.143609 0.399404 0.399344C0.14367 0.655078 0 1.00193 0 1.36359C0 1.72525 0.14367 2.0721 0.399404 2.32784C0.655138 2.58357 1.00199 2.72724 1.36365 2.72724H7.09985C7.40773 2.72721 7.70655 2.83136 7.94771 3.02275C8.18886 3.21414 8.35816 3.48151 8.42805 3.78134L12.217 20.0204C12.4267 20.9197 12.9346 21.7215 13.6579 22.2955C14.3812 22.8696 15.2774 23.182 16.2009 23.182H39.5459C39.9076 23.182 40.2544 23.0383 40.5101 22.7826C40.7659 22.5269 40.9095 22.18 40.9095 21.8184C40.9095 21.4567 40.7659 21.1098 40.5101 20.8541C40.2544 20.5984 39.9076 20.4547 39.5459 20.4547Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M32.6597 8.18182H27.9551V12.2728H32.1019L32.6597 8.18182Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M27.9551 6.81806H32.8458L33.3101 3.40894H27.9551V6.81806Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M26.5914 6.818V3.40887H21.2363L21.7007 6.818H26.5914Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M40.0564 3.40887H34.6877L34.2227 6.818H39.2818L40.0564 3.40887Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M32.8281 17.0454H36.9573L37.7318 13.6363H33.2924L32.8281 17.0454Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M26.5913 8.18182H21.8867L22.4445 12.2728H26.5913V8.18182Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M38.9693 8.18182H34.0343L33.4766 12.2728H38.04L38.9693 8.18182Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M27.9551 17.0454H31.4508L31.9158 13.6362H27.9551V17.0454Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M20.3259 6.818L19.8609 3.40887H14.4922L15.2667 6.818H20.3259Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M16.5035 12.2728H21.067L20.5093 8.18182H15.5742L16.5035 12.2728Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M26.5916 17.0454V13.6363H22.6309L23.0959 17.0454H26.5916Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M16.8145 13.6363L17.589 17.0454H21.7181L21.2538 13.6363H16.8145Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M17.0449 26.5909C17.0449 27.2652 17.2449 27.9243 17.6195 28.4849C17.9941 29.0455 18.5265 29.4825 19.1494 29.7405C19.7724 29.9985 20.4578 30.0661 21.1191 29.9345C21.7804 29.803 22.3879 29.4783 22.8647 29.0015C23.3414 28.5247 23.6661 27.9173 23.7977 27.256C23.9292 26.5947 23.8617 25.9092 23.6037 25.2863C23.3456 24.6633 22.9087 24.1309 22.3481 23.7563C21.7874 23.3817 21.1283 23.1818 20.454 23.1818C19.5499 23.1818 18.6828 23.5409 18.0434 24.1803C17.4041 24.8196 17.0449 25.6867 17.0449 26.5909ZM20.454 25.2272C20.7238 25.2272 20.9874 25.3072 21.2117 25.4571C21.4359 25.6069 21.6107 25.8199 21.7139 26.069C21.8171 26.3182 21.8441 26.5924 21.7915 26.8569C21.7389 27.1214 21.609 27.3644 21.4183 27.5551C21.2276 27.7458 20.9846 27.8757 20.7201 27.9283C20.4556 27.981 20.1814 27.954 19.9322 27.8507C19.683 27.7475 19.4701 27.5727 19.3202 27.3485C19.1704 27.1242 19.0904 26.8606 19.0904 26.5909C19.0904 26.2292 19.2341 25.8824 19.4898 25.6266C19.7455 25.3709 20.0924 25.2272 20.454 25.2272Z"
+                                fill="black"
+                            />
+                            <path
+                                d="M30.6836 26.5908C30.6836 27.2651 30.8835 27.9242 31.2581 28.4848C31.6327 29.0455 32.1652 29.4824 32.7881 29.7405C33.411 29.9985 34.0965 30.066 34.7578 29.9345C35.4191 29.8029 36.0266 29.4782 36.5033 29.0014C36.9801 28.5247 37.3048 27.9172 37.4363 27.2559C37.5679 26.5946 37.5004 25.9091 37.2423 25.2862C36.9843 24.6633 36.5474 24.1308 35.9867 23.7562C35.4261 23.3816 34.767 23.1817 34.0927 23.1817C33.1886 23.1817 32.3214 23.5409 31.6821 24.1802C31.0428 24.8195 30.6836 25.6867 30.6836 26.5908ZM34.0927 25.2272C34.3624 25.2272 34.6261 25.3072 34.8503 25.457C35.0746 25.6068 35.2494 25.8198 35.3526 26.069C35.4558 26.3182 35.4828 26.5923 35.4302 26.8569C35.3776 27.1214 35.2477 27.3644 35.057 27.5551C34.8663 27.7458 34.6233 27.8757 34.3588 27.9283C34.0942 27.9809 33.8201 27.9539 33.5709 27.8507C33.3217 27.7475 33.1087 27.5727 32.9589 27.3484C32.809 27.1242 32.7291 26.8605 32.7291 26.5908C32.7291 26.2292 32.8727 25.8823 33.1285 25.6266C33.3842 25.3708 33.7311 25.2272 34.0927 25.2272Z"
+                                fill="black"
+                            />
+                            </svg>
+                            <span
+                            class="order__accordion__content__delivery__card__content__title"
+                            >Самовывоз
+                            </span>
+                        </div>
+                        </label>
+                        <div
+                        class="order__accordion__content__delivery__information"
+                        >
+                        <h4>Доставка курьером</h4>
+                        <p>
+                            Доставка по Москве осуществляется в течение дня в
+                            удобное для вас время. В крупные города России в течении
+                            2-3 дней.
+                        </p>
+                        <p>Стоимость:<span>500 ₽</span></p>
+                        </div>
+                    </div>
+                    <div
+                        class="basket__card__coupon__code"
+                        style="padding-left: 10px; margin-bottom: 38px;"
+                    >
+                        <h4
+                        class="basket__card__coupon__code__title"
+                        style="margin-bottom: 5px;"
+                        >
+                        Применить купон
+                        </h4>
+                        <div class="basket__card__coupon__code__input">
+                        <input class="inp" type="text" />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="5"
+                            height="8"
+                            viewBox="0 0 5 8"
+                            fill="none"
+                        >
+                            <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0.480957L0 7.51908L5 3.98034L0 0.480957Z"
+                            fill="#999999"
+                            />
+                        </svg>
+                        </div>
+                    </div>
+                    <button class="order__accordion__content__next--btn">
+                        Далее
+                    </button>
+                    <button class="order__accordion__content__prev--btn">
+                        Назад
+                    </button>
+                    </div>
                 </div>
-                <h2> product -3 </h2>
-                <div class="order__accordion--content order__accordion--content--3">
-                    <h1>hell -3</h1>
-                    <button  class="order__accordion--content__next--btn">Далее</button>
+                <div class="order__accordion">
+                    <div class="order__accordion__header">
+                    <span>3</span>
+                    <h3>Доставка</h3>
+                    </div>
+                    <div
+                    class="order__accordion__content order__accordion__content--3"
+                    >
+                    <div class="order__region">
+                        <form action="#">
+                        <h3>Тип плательщика</h3>
+                        <div class="order__region__options--wrapper">
+                            <div class="options">
+                            <div class="options__item">
+                                <input
+                                type="radio"
+                                id="option1"
+                                name="options"
+                                class="options__input"
+                                />
+                                <label for="option1" class="options__label">
+                                <span class="options__text">Физическое лицо</span>
+                                </label>
+                            </div>
+                            </div>
+                            <div class="options">
+                            <div class="options__item">
+                                <input
+                                type="radio"
+                                id="option2"
+                                name="options"
+                                class="options__input"
+                                />
+                                <label for="option2" class="options__label">
+                                <span class="options__text"
+                                    >Юридическое лицо</span
+                                >
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        <h3>Местоположение</h3>
+                        <div class="order__region__options--wrapper">
+                            <input
+                            class="order__region__input"
+                            type="search"
+                            value="г. Москва, Центр, Россия"
+                            />
+                        </div>
+                        <h3>Индекс</h3>
+                        <div class="order__region__options--wrapper">
+                            <input
+                            class="order__region__input"
+                            type="search"
+                            value="101000"
+                            />
+                        </div>
+                        </form>
+                    </div>
+                    <button class="order__accordion__content__next--btn">
+                        Далее
+                    </button>
+                    <button class="order__accordion__content__prev--btn">
+                        Назад
+                    </button>
+                    </div>
                 </div>
-                <h2> product -4 </h2>
-                <div class="order__accordion--content order__accordion--content--4">
-                    <h1>hell -4</h1>
-                    <button  class="order__accordion--content__next--btn">Далее</button>
+                <div class="order__accordion">
+                    <div class="order__accordion__header">
+                    <span>4</span>
+                    <h3>Оплата</h3>
+                    </div>
+                    <div
+                    class="order__accordion__content order__accordion__content--3"
+                    >
+                    <div class="order__accordion__content__delivery__cards">
+                        <label
+                        for="check__3"
+                        class="order__accordion__content__delivery__card"
+                        >
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="check__3" />
+                            <label for="check__3">
+                            <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                            </label>
+                        </div>
+                        <div
+                            class="order__accordion__content__delivery__card__content"
+                        >
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="60"
+                            height="51"
+                            viewBox="0 0 60 51"
+                            fill="none"
+                            >
+                            <g clip-path="url(#clip0_834_6981)">
+                                <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M5.18797 11.094H8.17843L13.9109 1.1653C14.0821 0.861437 14.3691 0.641978 14.7044 0.55034C15.0396 0.461111 15.3989 0.50693 15.698 0.68057L33.7347 11.0939H54.5638C54.9135 11.0939 55.2463 11.2313 55.4922 11.4797C55.7382 11.7233 55.8757 12.0585 55.8757 12.4058V23.8804L58.4561 25.3708C58.76 25.5444 58.9819 25.8314 59.0711 26.1667C59.1627 26.5043 59.1145 26.8636 58.9409 27.1651L58.9192 27.2013L55.8781 32.4682V38.6034H55.8757C55.8757 38.9507 55.7382 39.2859 55.4922 39.5319C55.2462 39.7779 54.9134 39.9154 54.5638 39.9154H51.5733L45.8457 49.8465C45.6721 50.1504 45.3851 50.3698 45.0498 50.4615C44.7122 50.5507 44.3553 50.5049 44.0538 50.3288L26.0171 39.918H5.18803C4.84075 39.918 4.50551 39.7805 4.25955 39.5321C4.01356 39.2885 3.8761 38.9533 3.8761 38.6061V27.1315L1.29083 25.6411C0.98938 25.4674 0.767507 25.1804 0.678277 24.8452C0.586634 24.5076 0.634868 24.1482 0.810915 23.8468C0.81815 23.8347 0.825384 23.8227 0.832619 23.8106L3.8737 18.5436V12.4084C3.8737 12.0612 4.01117 11.7283 4.25715 11.4824C4.50314 11.2364 4.83835 11.0965 5.18562 11.0965L5.18797 11.094ZM45.5614 22.6723C44.2085 22.6723 43.0461 23.6273 42.7832 24.9537C42.5203 26.2776 43.2294 27.6065 44.4786 28.1226C45.7278 28.6386 47.1676 28.2021 47.9176 27.0783C48.67 25.9545 48.5205 24.4569 47.5655 23.5019C47.0349 22.9689 46.3139 22.6699 45.5614 22.6723ZM46.596 24.4714C46.1016 23.977 45.3275 23.9022 44.7487 24.2881C44.1675 24.6764 43.9432 25.4215 44.2085 26.0655C44.4762 26.7118 45.1611 27.0783 45.8459 26.9409C46.5309 26.8059 47.0253 26.203 47.0253 25.506C47.0253 25.1177 46.8709 24.7439 46.596 24.4714ZM14.1911 22.6723C12.8382 22.6723 11.6758 23.6273 11.4129 24.9537C11.1476 26.2801 11.859 27.6089 13.1083 28.125C14.3575 28.6435 15.7997 28.2045 16.5496 27.0807C17.3021 25.9569 17.1525 24.4569 16.1975 23.5019C15.6646 22.9689 14.9435 22.6699 14.1911 22.6723ZM15.2281 24.4714C14.7337 23.977 13.9596 23.9022 13.3784 24.2881C12.7996 24.6764 12.5729 25.4215 12.8406 26.0655C13.1083 26.7118 13.7932 27.0783 14.478 26.9409C15.163 26.8059 15.6549 26.203 15.6549 25.506C15.6573 25.1177 15.503 24.7439 15.2281 24.4714ZM29.8761 15.9417C26.9025 15.9417 24.0978 17.3236 22.2866 19.6845C20.4755 22.0431 19.8653 25.1107 20.6346 27.9827C21.404 30.8549 23.4659 33.2063 26.2128 34.3448C28.962 35.4831 32.0827 35.2781 34.6585 33.7925C37.2341 32.3045 38.9705 29.7048 39.3588 26.7557C39.7471 23.8087 38.7414 20.8472 36.6385 18.7439C34.8467 16.9473 32.413 15.9393 29.8761 15.9417ZM35.6688 19.7111C32.905 16.9473 28.5739 16.5205 25.3252 18.6934C22.0744 20.8639 20.8107 25.0289 22.3083 28.6387C23.8035 32.2514 27.6404 34.3037 31.4751 33.5416C35.3072 32.7771 38.0687 29.4153 38.0712 25.5058C38.0736 23.3329 37.2103 21.2469 35.6692 19.7131L35.6688 19.7111ZM33.7974 39.9156L40.0267 43.5137C41.4134 41.7243 43.825 41.078 45.9208 41.9341L47.0856 39.9204L33.7974 39.9156ZM48.6626 39.9156L46.8081 43.1254L46.8105 43.1278C46.796 43.1544 46.7815 43.1809 46.7647 43.2074C46.5549 43.5209 46.128 43.6078 45.8145 43.3979C44.0733 42.4212 41.8715 43.0121 40.8513 44.7267C40.8392 44.7533 40.8248 44.7798 40.8079 44.8039C40.6077 45.1029 40.2098 45.197 39.8987 45.0161L31.0696 39.9179H28.752L44.6877 49.1206L50.0006 39.9204L48.6626 39.9156ZM25.9499 11.0939L19.723 7.49815C18.3363 9.28997 15.9247 9.93389 13.829 9.07537L12.6642 11.0891L25.9499 11.0939ZM11.0896 11.0939L12.9345 7.89846C13.0189 7.71276 13.1805 7.5753 13.3783 7.52224C13.5736 7.46918 13.7834 7.50536 13.9498 7.62112C15.6838 8.58337 17.8712 7.99975 18.8937 6.29715C18.9274 6.2248 18.9732 6.15969 19.0287 6.10181C19.2482 5.88235 19.5882 5.83894 19.8559 5.99329L28.685 11.0915H31.0002L15.0644 1.8913L9.75155 11.0939L11.0896 11.0939ZM55.8785 25.4553V29.736L57.7331 26.5261L55.8785 25.4553ZM3.87185 25.5542L3.87426 21.2736L2.01972 24.4858L3.87426 25.5566L3.87185 25.5542ZM51.9841 31.7087V19.3031C49.7413 18.9944 47.9784 17.2315 47.6697 14.9887H12.0834C11.7747 17.2315 10.0118 18.9944 7.76898 19.3031V31.7087C10.0118 32.0174 11.7747 33.7803 12.0834 36.0231H47.6697C47.9784 33.7803 49.7413 32.0174 51.9841 31.7087ZM53.3539 18.6641L53.3564 18.6617C53.3564 18.2855 53.0477 17.9768 52.6714 17.9768C51.6947 17.9768 50.7614 17.591 50.0717 16.9012C49.382 16.2115 48.9961 15.2782 48.9961 14.3039C48.9961 14.1206 48.9238 13.947 48.7936 13.8192C48.6657 13.6889 48.4921 13.6166 48.3088 13.619H11.4446C11.2613 13.6166 11.0876 13.6889 10.9598 13.8192C10.8296 13.947 10.7572 14.1206 10.7572 14.3039C10.7572 15.2782 10.3714 16.2115 9.68165 16.9012C8.99191 17.591 8.05862 17.9768 7.08434 17.9768C6.90105 17.9768 6.72742 18.0492 6.5996 18.1794C6.46937 18.3072 6.39702 18.4808 6.39702 18.6617V32.3477C6.39702 32.531 6.46937 32.7047 6.5996 32.8325C6.72741 32.9603 6.90105 33.0327 7.08434 33.0327C8.05862 33.0327 8.99191 33.4209 9.68165 34.1107C10.3714 34.798 10.7572 35.7337 10.7572 36.708C10.7572 36.8913 10.8296 37.0649 10.9598 37.1927C11.0876 37.3205 11.2613 37.3929 11.4446 37.3929H48.3088C48.4921 37.3929 48.6657 37.3205 48.7936 37.1927C48.9238 37.0649 48.9961 36.8913 48.9961 36.708C48.9961 35.7337 49.382 34.7979 50.0717 34.1107C50.7615 33.4209 51.6947 33.0327 52.6714 33.0327C52.8523 33.0327 53.0259 32.9603 53.1538 32.8325C53.284 32.7047 53.3563 32.531 53.3563 32.3477V18.6642L53.3539 18.6641ZM54.5067 12.4638H5.24675V38.548H54.5067V12.4638Z"
+                                fill="black"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_834_6981">
+                                <rect width="60" height="51" fill="white" />
+                                </clipPath>
+                            </defs>
+                            </svg>
+                            <span
+                            class="order__accordion__content__delivery__card__content__title"
+                            >Доставка Наличные курьеру</span
+                            >
+                            <br />
+                        </div>
+                        </label>
+                        <label
+                        for="check__4"
+                        class="order__accordion__content__delivery__card"
+                        >
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="check__4" />
+                            <label for="check__4">
+                            <svg viewBox="0,0,50,50">
+                                <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                            </label>
+                        </div>
+                        <div
+                            class="order__accordion__content__delivery__card__content"
+                        >
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="53"
+                            height="45"
+                            viewBox="0 0 53 45"
+                            fill="none"
+                            >
+                            <g clip-path="url(#clip0_883_8194)">
+                                <path
+                                d="M52.1134 11.6397C51.7117 10.8898 51.0475 10.3434 50.244 10.1024L17.2854 0.133913C16.9908 0.042852 16.6855 0 16.3748 0C14.9875 0 13.7394 0.926675 13.3431 2.25509L10.397 12.0414H3.16034C1.41412 12.0414 0 13.4609 0 15.2125V41.829C0 43.5752 1.41947 45 3.16034 45H44.9679C46.7141 45 48.1282 43.5805 48.1282 41.829V28.0895L52.3545 14.0555C52.6009 13.2466 52.5152 12.3896 52.1134 11.6397ZM3.16034 13.3056H44.9679C46.0124 13.3056 46.8641 14.1572 46.8641 15.2071V20.2797H1.26414V15.2071C1.26414 14.1626 2.11582 13.3056 3.16034 13.3056ZM44.9679 43.7252H3.16034C2.11582 43.7252 1.26414 42.8735 1.26414 41.8236V22.8187H46.8641V41.829C46.8641 42.8735 46.0124 43.7252 44.9679 43.7252ZM51.1493 13.6859L48.1336 23.7025V15.2071C48.1336 13.4609 46.7141 12.0361 44.9732 12.0361H11.7147L14.5536 2.61397C14.7947 1.81586 15.5446 1.26414 16.3748 1.26414C16.557 1.26414 16.7391 1.29092 16.9158 1.34448L49.8744 11.3129C50.3565 11.4576 50.7529 11.7843 50.9939 12.2343C51.2403 12.6896 51.2939 13.2038 51.1493 13.6859ZM29.3911 27.9074H5.3565C5.00833 27.9074 4.72444 28.1913 4.72444 28.5395C4.72444 28.8876 5.00833 29.1715 5.3565 29.1715H29.3911C29.7393 29.1715 30.0232 28.8876 30.0232 28.5395C30.0232 28.1913 29.7393 27.9074 29.3911 27.9074ZM23.0651 34.2013H5.3565C5.00833 34.2013 4.72444 34.4852 4.72444 34.8334C4.72444 35.1815 5.00833 35.4654 5.3565 35.4654H23.0651C23.4133 35.4654 23.6972 35.1815 23.6972 34.8334C23.6972 34.4852 23.4133 34.2013 23.0651 34.2013ZM41.3683 27.9074H35.6743C34.6298 27.9074 33.7781 28.7644 33.7781 29.809C33.7781 30.8535 34.6298 31.7105 35.6743 31.7105H41.3683C42.4128 31.7105 43.2645 30.8535 43.2645 29.809C43.2645 28.7591 42.4128 27.9074 41.3683 27.9074Z"
+                                fill="black"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_883_8194">
+                                <rect width="52.4924" height="45" fill="white" />
+                                </clipPath>
+                            </defs>
+                            </svg>
+                            <span
+                            class="order__accordion__content__delivery__card__content__title"
+                            >Оплата картой курьеру</span
+                            >
+                        </div>
+                        </label>
+                        <div
+                        class="order__accordion__content__delivery__information"
+                        >
+                        <h4>Наличные курьеру</h4>
+                        <p>
+                            Оплата производится наличными деньгами, в момент
+                            получения заказа. Подтверждением вашей оплаты является
+                            фискальный кассовый чек, вручаемый во время получения и
+                            оплаты заказа.
+                        </p>
+                        </div>
+                    </div>
+                    <div
+                        class="basket__card__coupon__code"
+                        style="padding-left: 10px; margin-bottom: 38px;"
+                    >
+                        <h4
+                        class="basket__card__coupon__code__title"
+                        style="margin-bottom: 5px;"
+                        >
+                        Применить купон
+                        </h4>
+                        <div class="basket__card__coupon__code__input">
+                        <input class="inp" type="text" />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="5"
+                            height="8"
+                            viewBox="0 0 5 8"
+                            fill="none"
+                        >
+                            <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0.480957L0 7.51908L5 3.98034L0 0.480957Z"
+                            fill="#999999"
+                            />
+                        </svg>
+                        </div>
+                    </div>
+                    <button class="order__accordion__content__next--btn">
+                        Далее
+                    </button>
+                    <button class="order__accordion__content__prev--btn">
+                        Назад
+                    </button>
+                    </div>
+                </div>
+                <div class="order__accordion">
+                    <div class="order__accordion__header">
+                    <span>5</span>
+                    <h3>Покупатель</h3>
+                    </div>
+                    <div
+                    class="order__accordion__content order__accordion__content--4"
+                    >
+                    <label class="order__user--input--wrapper" for="name">
+                        <span>* Ф.И.О.</span> <br />
+                        <input id="name" type="text" class="order__user--input" />
+                    </label>
+                    <label class="order__user--input--wrapper" for="email">
+                        <span>* E-Mail</span> <br />
+                        <input id="email" type="email" class="order__user--input" />
+                    </label>
+                    <label class="order__user--input--wrapper" for="phone">
+                        <span>* Телефон</span> <br />
+                        <input
+                        id="phone"
+                        type="number"
+                        class="order__user--input"
+                        />
+                    </label>
+                    <label class="order__user--input--wrapper" for="address">
+                        <span>* Адрес доставки</span> <br />
+                        <input
+                        id="address"
+                        type="text"
+                        class="order__user--input"
+                        />
+                    </label>
+                    <label class="order__user--textarea--wrapper" for="textarea">
+                        <span>* Адрес доставки</span> <br />
+                        <textarea
+                        id="textarea"
+                        class="order__user--textarea"
+                        ></textarea>
+                    </label>
+                    <button class="order__accordion__content__prev--btn">
+                        Назад
+                    </button>
+                    </div>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="check1" />
+                    <label for="check1">
+                    <svg viewBox="0,0,50,50">
+                        <path d="M5 30 L 20 45 L 45 5"></path>
+                    </svg>
+                    </label>
+                    <label id="checkbox__title" for="check1" class="check__title">
+                    Нажимая кнопку «Оформить заказ», я даю свое согласие на
+                    обработку моих персональных данных, в соответствии с
+                    Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных
+                    данных», на условиях и для целей, определенных в Согласии на
+                    обработку персональных данных</label
+                    >
+                </div>
+                <button class="order__next--btn">Оформить заказ</button>
+                </div>
+                <div class="order__products--total">
+                <p>
+                    <span>Товаров на:</span>
+                    <span>15 900 ₽</span>
+                </p>
+                <p>
+                    <span>Доставка:</span>
+                    <span>500 ₽</span>
+                </p>
+                <h3>
+                    <span>Итого:</span>
+                    <span>16 400 ₽</span>
+                </h3>
                 </div>
             </div>
         </div>
+      </div>
+      @@include('html/_footer.htm',{})
     </div>
-	@@include('html/_js.htm',{})
-</body>
-
+    @@include('html/_js.htm',{})
+  </body>
 </html>
-

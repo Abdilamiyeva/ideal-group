@@ -20,6 +20,8 @@
 			box-shadow: 0 0 5px #000;
 		}
 		&:checked + .options__label:before {
+			background-color: #000;
+			border-color: #000;
 		}
 		&:checked + .options__label:after {
 			transform: scale(1);
@@ -38,7 +40,8 @@
 			height: 20px;
 			flex: 0 0 20px;
 			border-radius: 50%;
-			border: 1px solid #a7a9ac;
+			border: 1px solid $mainColor;
+			transition: background-color 0.3s ease; // Smooth transition for background
 		}
 		&:after {
 			content: "";
@@ -47,7 +50,7 @@
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
-			background-color: #77243a;
+			background-color: white;
 			position: absolute;
 			left: 5px;
 			top: 5px;
@@ -55,5 +58,6 @@
 	}
 	// .options__text
 	&__text {
+		
 	}
 }

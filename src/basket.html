@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/_head.htm',{ "title":"Корзина", "description":"Здесь будет
-  мета описание страницы" })
+@@include('html/_head.htm',{
+"title":"Корзина",
+"description":"Здесь будет мета описание страницы"
+})
   <body>
     <div class="wrapper">
       @@include('html/_header.htm', {})
@@ -19,13 +21,13 @@
             <div class="basket__cards">
               <div class="basket__all__select__btn">
                 <div class="checkbox-wrapper">
-                  <input type="checkbox" id="check__1" />
-                  <label for="check__1">
+                  <input class="basket__all--checkbtn" type="checkbox" id="basket__check1" />
+                  <label for="basket__check1">
                     <svg viewBox="0,0,50,50">
                       <path d="M5 30 L 20 45 L 45 5"></path>
                     </svg>
                   </label>
-                  <label for="check__1" class="check__title">
+                  <label for="basket__check1" class="check__title">
                     Выбрать все</label
                   >
                 </div>
@@ -33,13 +35,13 @@
               <div class="basket__card">
                 <div class="basket__card__section">
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="check__2" />
-                        <label for="check__2">
+                        <input class="basket__checkbtn" type="checkbox" id="basket__check2" />
+                        <label for="basket__check2">
                           <svg viewBox="0,0,50,50">
                             <path d="M5 30 L 20 45 L 45 5"></path>
                           </svg>
                         </label>
-                        <label for="check__2" class="check__title">
+                        <label for="basket__check2" class="check__title">
                            <div class="img" >
                                  <img  src="@img/card__icon.svg" alt="Image">
                            </div>
@@ -49,10 +51,8 @@
                     </div>
                     <div class="basket__card__section--rigth">
                         <span class="price">5 300 ₽</span>
-                        <div class="counter">
-                            <span class="inc">-</span>
-                            <input  type="text" placeholder="1" value="1">
-                            <span class="dec">+</span>
+                        <div class="basket__card__counter--wrapper">
+                          @@include('html/_counter.htm',{})
                         </div>
                     </div>
                 </div>
@@ -71,13 +71,13 @@
               <div class="basket__card">
                 <div class="basket__card__section">
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="check__3" />
-                        <label for="check__3">
+                        <input class="basket__checkbtn" type="checkbox" id="basket__check3" />
+                        <label for="basket__check3">
                           <svg viewBox="0,0,50,50">
                             <path d="M5 30 L 20 45 L 45 5"></path>
                           </svg>
                         </label>
-                        <label for="check__3" class="check__title">
+                        <label for="basket__check3" class="check__title">
                            <div class="img" >
                                  <img  src="@img/card__icon.svg" alt="Image">
                            </div>
@@ -87,11 +87,10 @@
                     </div>
                     <div class="basket__card__section--rigth">
                         <span class="price">5 300 ₽</span>
-                        <div class="counter">
-                            <span class="inc">-</span>
-                            <input  type="text" placeholder="1" value="1">
-                            <span class="dec">+</span>
-                        </div>
+                         <div class="basket__card__counter-wrapper">
+                            @@include('html/_counter.htm',{})
+                         </div>
+
                     </div>
                 </div>
                 <div class="basket__card__icons">

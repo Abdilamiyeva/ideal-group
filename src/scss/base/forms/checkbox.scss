@@ -4,7 +4,11 @@ $scale-factor: 1.03;
 
 .checkbox-wrapper {
 	margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: toRem(15);
   max-width: max-content;
+ 
   *,
   *:after,
   *:before {
@@ -34,12 +38,13 @@ $scale-factor: 1.03;
 
   input + label {
     border: 2px solid #999;
-    width: 25px;
-    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     border-radius: $border-radius;
     cursor: pointer;
     transition: all 0.2s ease;
 	  vertical-align:middle;
+
 
   }
   .check__title{

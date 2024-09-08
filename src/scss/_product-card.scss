@@ -7,7 +7,9 @@
     background: white;
     &__image{
         display: block;
-        width: toRem(75.461);
+        width: 75.461px;
+        height: 155px;
+        flex-shrink: 0;
         margin: toRem(61) auto;
     }
     &__icons{
@@ -65,32 +67,6 @@
             &:hover {
                 background:$goldDark;
                 color: white;
-            }
-        }
-
-        &-number{
-            display: flex;
-            align-items:center;
-            border-radius: toRem(4);
-            border: 1px solid $grey2;
-            
-            .inc, .dec{
-                padding: toRem(11) toRem(16);
-                font-size: toRem(15);
-                font-weight: 500;
-                height: 100%;
-                transition:all 0.25s ease;
-
-                &:hover{
-                    background:$grey3;
-                }
-            }
-
-            .num{
-                padding: toRem(11) toRem(26);
-                font-size: toRem(15);
-                font-weight: 500;
-                text-align: center;
             }
         }
     }

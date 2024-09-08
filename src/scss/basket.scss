@@ -107,37 +107,7 @@
                         font-size: toRem(14);
                         font-weight: 500;
                         white-space: nowrap;
-                    }
-                    .counter{
-                        display: flex;
-                        gap: toRem(10);
-                        align-items: center;
-                        margin-right: toRem(10);
-                        .inc, .dec{
-                            padding: toRem(11) toRem(16);
-                            border-radius: toRem(4);
-                            border: 1px solid #D9D9D9;
-                            font-weight: 500;
-                            font-size: toRem(15);
-                            transition: all .25s ease;
-                            background: $grey;
-                            cursor: pointer;
-                           &:hover{
-                            background: $gold;
-                               
-                           }
-                           &.active{
-                            background: $gold;
-                           }
-                        }
-                        input{
-                            border-radius: toRem(4);
-                            width: 60px;
-                            border: 1px solid #D9D9D9;
-                            padding: toRem(10) toRem(26);
-                            color: $mainColor;
-                        }
-                    }  
+                    } 
                     @media (min-width:0) and (max-width:$mobile) {
                         flex-direction: column;
                     }
@@ -147,6 +117,9 @@
                     
                 }
             }
+            &__counter-wrapper{
+                margin-right: toRem(10);
+            } 
             .checkbox-wrapper{
                 padding: toRem(7) toRem(10);
                 margin-bottom: 0 !important;
