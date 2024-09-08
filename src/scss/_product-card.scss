@@ -25,6 +25,14 @@
                 fill: $gold; 
                 
             }
+            &.active{
+                stroke:$gold; 
+                fill: $gold;  
+            }
+            &.liked path{
+                stroke:$gold; 
+                fill: $gold;  
+            }    
         }
     }
     &__content{

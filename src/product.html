@@ -29,77 +29,8 @@
           </h2>
           <div class="product__section__card">
             <div class="product__section__card--left">
-              <!-- <img src="@img/product_card_img.svg" /> -->
-              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                     <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-              <div thumbsSlider="" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="@img/logo-2.png" alt="Image">
-                  </div>
-                </div>
-              </div>
+             @@include('html/_swiper.htm',{})
+              
             </div>
             <div class="product__section__card--right">
               <div class="product__section__card--right--section--1">
@@ -134,7 +65,7 @@
               <div class="product__section__card--right--section--2">
                   <h3 class="product__section__card--right--section--2--price">5 300 ₽</h3>
                       @@include('html/_counter.htm', {})
-                    <button class="product__section__card--right--section--2--btn product__bottom__content-btn">В корзину</button>
+                    <button class="product__section__card--right--section--2--btn product__bottom__content-btn add-to-cart-btn">В корзину</button>
               </div> 
             </div>
           </div>
@@ -337,6 +268,7 @@
         </div>
     </div>
     </div>
+    @@include('html/_modal.htm',{})
     @@include('html/_footer.htm', {})
     </div>
     @@include('html/_js.htm',{})
