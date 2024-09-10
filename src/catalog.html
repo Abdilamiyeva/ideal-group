@@ -7,17 +7,25 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm', {})
-      <section id="catalog" data-tabs class="categories">
+      <section id="catalog"  class="categories">
         <div class="categories__container">
-          <div class="catalog__links">
+          <!-- <div class="catalog__links">
             <a class="catalog__link active" href="#">Главная</a>
             <a class="catalog__link" href="#">/</a>
             <a class="catalog__link" href="#">Каталог</a>
-          </div>
-          <h2 class="catalog__section-title">Каталог</h2>
-          <div data-tabs-body class="categories__content">
-            <div class="categories__body">
-              <div class="categories__list">
+          </div> -->
+          <!-- @@include('html/_breadcrumb.htm', {
+            "links": [
+              { "name": "Главная", "active": true },
+              { "name": "Каталог", "active": true },
+              { "name": "Продукты", "active": true },
+              { "name": "Контакты", "active": false }
+            ]
+          }) -->
+          
+          
+          <h1 class="catalog__section-title">Каталог</h1>
+            <div class="categories__list">
                 @@include('html/_category.htm',{ "image":"cat9.png", "title":
                 "Имплантационная система DIO" })
                 @@include('html/_category.htm',{ "image":"cat10.png", "title":
@@ -25,9 +33,7 @@
                 "image":"cat11.png", "title": "Инструменты и наборы" })
                 @@include('html/_category.htm',{ "image":"cat12.png", "title":
                 "Расходные материалы" })
-              </div>
             </div>
-          </div>
         </div>
       </section>
       <div style="margin-bottom: 10px;" class="callback callback--first">
@@ -70,6 +76,7 @@
           </form>
         </div>
       </div>
+
       @@include('html/_footer.htm', {})
     </div>
     @@include('html/_js.htm',{})

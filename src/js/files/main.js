@@ -1,30 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //modal
-  const modal = document.getElementById("modal");
-  const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
-  const closeModalButton = document.getElementById("modal-close-btn");
-
-  if (addToCartButtons && modal) {
-    addToCartButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-        console.log("hello");
-        modal.classList.add("active");
-      });
-    });
-  }
-
-  if (closeModalButton && modal) {
-    closeModalButton.addEventListener("click", function () {
-      modal.classList.remove("active");
-    });
-  }
-
-  window.addEventListener("click", function (e) {
-    if (e.target === modal) {
-      modal.classList.remove("active");
-    }
-  });
-
+  
   // order accordion
   const buttons = document.querySelectorAll(
     ".order__accordion__content__next--btn"
@@ -70,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // accordion
-  document.querySelectorAll(".item .title").forEach((title) => {
-    title.addEventListener("click", function () {
-      const item = this.parentElement;
-      item.classList.toggle("active");
-    });
-  });
+//   document.querySelectorAll(".item .title").forEach((title) => {
+//     title.addEventListener("click", function () {
+//       const item = this.parentElement;
+//       item.classList.toggle("active");
+//     });
+//   });
 });

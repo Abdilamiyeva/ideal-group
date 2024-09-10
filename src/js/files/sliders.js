@@ -36,14 +36,14 @@ function initSliders() {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			slidesPerView: 4,
 			spaceBetween: 0,
 			//autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -77,10 +77,10 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+		
 			// Брейкпоінти
 			breakpoints: {
-				640: {
+				0: {
 					slidesPerView: 1,
 					spaceBetween: 0,
 					autoHeight: true,
@@ -98,7 +98,7 @@ function initSliders() {
 					spaceBetween: 30,
 				},
 			},
-			*/
+			
 			// Події
 			on: {
 
@@ -139,5 +139,5 @@ window.addEventListener("load", function (e) {
 	// Запуск ініціалізації слайдерів
 	initSliders();
 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-	//initSlidersScroll();
+	initSlidersScroll();
 });

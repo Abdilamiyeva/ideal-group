@@ -9,26 +9,26 @@ $scale-factor: 1.03;
   gap: toRem(15);
   max-width: max-content;
  
-  *,
-  *:after,
-  *:before {
-    box-sizing: border-box;
-  }
-  
   input {
     position: absolute;
     opacity: 0;
     max-width: max-content;
 
   }
+  svg{
+    width: 15px;
+    height: 15px;
+    transform: rotate(20deg);
+  }
+  input:checked + label svg{
 
+  }
   input:checked + label svg path {
     stroke-dashoffset: 0;
   }
   input:checked + label{
 	background: $gold;
 	border: 2px solid transparent;
-  
   }
 
   input:focus + label {
@@ -43,9 +43,9 @@ $scale-factor: 1.03;
     border-radius: $border-radius;
     cursor: pointer;
     transition: all 0.2s ease;
-	  vertical-align:middle;
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .check__title{
 	font-size: toRem(14);
@@ -57,13 +57,12 @@ $scale-factor: 1.03;
 
   input + label:active {
     transform: scale(1.05);
-    border-radius: 12px;
+    border-radius: 4px;
 	
   }
 
   input + label svg {
     pointer-events: none;
-    padding: 5%;
   }
 
   input + label svg path {

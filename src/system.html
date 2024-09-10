@@ -10,14 +10,15 @@
         <div class="system__container">
           <div class="catalog__links">
             <a class="catalog__link active" href="./home.html">Главная</a>
-            <a class="catalog__link" href="#">/</a>
+            <span class="catalog__link" href="#">/</span>
             <a class="catalog__link active" href="./catalog.html">Каталог</a>
             <a class="catalog__link" href="#">/</a>
             <a class="catalog__link" href="#">Имплантационная система DIO</a>
           </div>
-          <h2 class="system__title">Имплантационная система DIO</h2>
+          <h1 class="system__title">Имплантационная система DIO</h1>
+          <button class="system__filter-btn">Фильтр </button>
           <div class="system__content">
-            <div class="system__left__content">
+            <aside class="system__left__content">
               <h3 class="system__left__content-title">
                 Имплантационная система DIO
               </h3>
@@ -27,30 +28,18 @@
                 </li>
                 <li class="system__left__content-item">
                   <a href="#">Ортопедические компоненты</a>
-                  <a
-                    class="system__left__content-item__link system__left__content-item__link__first"
-                    href="#"
-                    >Винтовая фиксация</a
-                  >
-                  <a class="system__left__content-item__link" href="#"
-                    >Съёмное протезирование</a
-                  >
-                  <a class="system__left__content-item__link" href="#"
-                    >Цементная фиксация</a
-                  >
-                  <a class="system__left__content-item__link" href="#"
-                    >Цифровые компоненты</a
-                  >
                 </li>
-                <li class="system__left__content-item">
-                  <a href="#">Хирургические инструменты</a>
-                </li>
+                <li class="system__left__content-item-child"><a href="#">Винтовая фиксация</a></li>
+                <li class="system__left__content-item-child"><a href="#">Съёмное протезирование</a></li>
+                <li class="system__left__content-item-child"><a href="#">Цементная фиксация</a></li>
+                <li class="system__left__content-item-child"><a href="#">Цифровые компоненты</a></li>
+                <li class="system__left__content-item"><a href="#">Хирургические инструменты</a></li>
               </ul>
               <div class="retail__price">
                 <h3 class="retail__price__name">Розничная цена</h3>
                 <div class="retail__price__values__wrapper">
-                  <input class="from" type="text" placeholder="От" />
-                  <input class="to" type="text" placeholder="До" />
+                  <input class="from" type="number" placeholder="От" />
+                  <input class="to" type="number" placeholder="До" />
                 </div>
               </div>
               <div id="range" class="range__one"></div>
@@ -58,12 +47,75 @@
                 <div id="value-start">0 ₽</div>
                 <div id="value-end">147 000 ₽</div>
               </div>
-              @@include('html/_accordion.htm',{})
+               <!-- spollers start -->
+                  <div data-spollers>
+                    <details>
+                        <summary> Фильтр 1</summary>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="checkbox1" />
+                          <label for="checkbox1">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                          <label for="checkbox1" class="check__title">Характеристика 1</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="checkbox2" />
+                          <label for="checkbox2">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                          <label for="checkbox2" class="check__title">Характеристика 2</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="checkbox3" />
+                          <label for="checkbox3">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                          <label for="checkbox3" class="check__title">Характеристика 3</label>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Фильтр 2</summary>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="checkbox4" />
+                          <label for="checkbox4">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                          <label for="checkbox4" class="check__title">Характеристика 1</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="checkbox5" />
+                          <label for="checkbox5">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                          <label for="checkbox5" class="check__title">Характеристика 2</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="checkbox6" />
+                          <label for="checkbox6">
+                            <svg viewBox="0,0,50,50">
+                              <path d="M5 30 L 20 45 L 45 5"></path>
+                            </svg>
+                          </label>
+                          <label for="checkbox6" class="check__title">Характеристика 3</label>
+                        </div>
+                    </details>
+                </div>
+                <!-- spollers end -->
               <div class="system__bottom__content__buttons">
                 <button class="btn__1">Показать</button>
-                <button class="btn__2">Сбросить</button>
+                <button id="clear__btn" class="btn__2">Сбросить</button>
               </div>
-            </div>
+            </aside>
             <div class="system__right__content">
               <div class="system__right__content__cards">
                 @@include('html/_product.htm', {})
@@ -91,7 +143,7 @@
       </div>
       <div class="recommendations__cards">
         <div class="recommendations__container">
-          <div class="swiper">
+          <div id="swiper-first" class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 @@include('html/_product.htm', {})
@@ -117,20 +169,8 @@
               <div class="swiper-slide">
                 @@include('html/_product.htm', {})
               </div>
-              <div class="swiper-slide">
-                @@include('html/_product.htm', {})
-              </div>
-              <div class="swiper-slide">
-                @@include('html/_product.htm', {})
-              </div>
-              <div class="swiper-slide">
-                @@include('html/_product.htm', {})
-              </div>
-              <div class="swiper-slide">
-                @@include('html/_product.htm', {})
-              </div>
             </div>
-            <div class="swiper-button-next">
+            <div id="next-btn" class="swiper-button-next">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -144,7 +184,7 @@
                 />
               </svg>
             </div>
-            <div class="swiper-button-prev">
+            <div id="prev-btn" class="swiper-button-prev">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -161,6 +201,7 @@
           </div>
         </div>
       </div>
+			@@include('html/_popup.htm',{})
       @@include('html/_footer.htm', {})
     </div>
     @@include('html/_js.htm',{})

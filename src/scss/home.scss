@@ -49,16 +49,14 @@
     &__list {
         display: flex;
         gap: toRem(30);
-
-        overflow-x: auto;
-
-        @media (min-width: $mobileSmall) {
+        @media (min-width: 0) {
             @include gridCards("fit", toRem(240), 1fr);
         }
         @media (min-width: $tablet) {
-            grid-template-columns: repeat(3, 1fr);
+            @include gridCards(fit, 1fr, 1fr, toRem(30));
             @include adaptiveValue("column-gap", 205, 30);
             @include adaptiveValue("row-gap", 65, 20);
+            
         }
     }
 }

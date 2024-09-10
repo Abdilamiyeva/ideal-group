@@ -8,17 +8,25 @@
     &__container {
         @media (min-width: $mobileSmall) {
             display: flex;
-            gap: toRem(45);
+            align-items: flex-start;
+            @include adaptiveValue("gap", 160, 45);
+        }
+        @media (max-width:$tablet) {
+            flex-wrap: wrap;
+            @include adaptiveValue("gap", 60, 45);
+            
         }
     }
     // .footer__left
     &__left {
         display: flex;
-        flex-direction: column;
-        margin-bottom: toRem(20);
+        justify-content: space-between;
+        align-items: flex-start;
+        @include adaptiveValue("gap", 140, 30);
     }
     // .footer__menu
     &__menu {
+
     }
 }
 .left-footer {
@@ -29,21 +37,57 @@
     }
     // .left-footer__copy
     &__copy {
+        color: $gold;
         margin-bottom: toRem(15);
     }
     // .left-footer__policy
     &__policy {
-        margin-bottom: toRem(23);
+        color: $gold;
+        margin-bottom: toRem(15);
     }
     // .left-footer__social
     &__social {
         display: flex;
         gap: toRem(24);
     }
+    &__contact{
+        margin-top: toRem(15);
+        &__phone{
+            margin-top: toRem(10);
+            margin-bottom: toRem(10);
+            a {
+                display: inline-block;
+                margin-left: toRem(10);
+                color: $gold;
+                transition: all 0.25s ease;
+                &:hover {
+                    color: $goldDark;
+                }  
+            }
+        }
+        &__work--time{
+            span{
+                color: $gold;
+                display: inline-block;
+                margin-left: toRem(10);
+            }
+        }
+    }
+    
 }
 .menu-footer {
     // .menu-footer__body
+    
     &__body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include adaptiveValue("gap", 140, 40);  
+        @media (max-width:$mobileSmall) {
+            flex-direction: column;
+            margin-top: toRem(40);
+
+        }
     }
     // .menu-footer__list
     &__list {
@@ -52,14 +96,21 @@
     }
     // .menu-footer__item
     &__item {
+    }   
+    &__title{
+        color: $gold;
+        font-size: toRem(16);
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: toRem(5);
     }
     // .menu-footer__link
     &__link {
         text-decoration: underline;
-
+        color: $gold;
         @media (any-hover: hover) {
             &:hover {
-                color: $gold;
+                color: $goldDark;
             }
         }
     }

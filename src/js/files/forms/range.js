@@ -10,6 +10,7 @@ export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
 	const valueStart = document.querySelector('#value-start'); 
     const valueEnd = document.querySelector('#value-end'); 
+	
 	if (priceSlider) {
 		let textFrom = priceSlider.getAttribute('data-from');
 		let textTo = priceSlider.getAttribute('data-to');
@@ -51,5 +52,6 @@ export function rangeInit() {
 	}
 }
 rangeInit();
+
 
 

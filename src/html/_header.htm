@@ -35,12 +35,6 @@
 					</a>
 				</div>
 				<div class="right-top-header__actions actions-header" data-da=".burger__actions, 992">
-					<a href="#" class="actions-header__item">
-						<svg width="19" height="19">
-							<use xlink:href="@img/icons/icons.svg#compare"></use>
-						</svg>
-						<span class="_count">0</span>
-					</a>
 					<a href="../selected-product.html" class="actions-header__item">
 						<svg width="19" height="19">
 							<use xlink:href="@img/icons/icons.svg#favorites"></use>
@@ -74,7 +68,19 @@
 
 			<nav class="menu-header__body" data-da=".burger, 991, 1">
 				<ul class="menu-header__list">
-					<li class="menu-header__item"><a href="../system.html" class="menu-header__link">Имплантационная система DIO</a>
+					<li class="menu-header__item " id="headerDropdown">
+						<a href="#" class="menu-header__link">Имплантационная система DIO</a>
+						<ul class="menu-header__item__dropdown-content"  id="dropdownContent">
+							<li><a href="#">Имплантаты</a></li>
+							<li><a href="#">Ортопедические компоненты</a></li>
+								<li class="dropdown__list"><a href="#">Винтовая фиксация</a></li>
+								<li class="dropdown__list"><a href="#">Съёмное протезирование</a></li>
+								<li class="dropdown__list"><a href="#">Цементная фиксация</a></li>
+								<li class="dropdown__list"><a href="#">Цифровые компоненты</a></li>
+							<li><a href="#">Хирургические инструменты</a></li>
+					
+						</ul>
+
 					</li>
 					<li class="menu-header__item"><a href="#" class="menu-header__link">Уход за полостью рта VOC</a>
 					</li>

@@ -24,9 +24,16 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	&__title{
+		margin-bottom: toRem(40);
+        margin-top: toRem(60);
+        text-align: center;
+        @extend %body_7;
+	}
 }
+
 .popup_show {
-	z-index: 150;
+	z-index: 999;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
@@ -57,5 +64,36 @@ body::after {
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
+	}
+	&-header{
+		display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+	}
+	&__img{
+		width: 75.327px;
+        height: 155px;
+        flex-shrink: 0;
+        margin-bottom: toRem(10);
+	}
+	&__info{
+		margin-top: toRem(60);
+		margin-bottom: toRem(114);
+		max-width: toRem(288);
+		@extend %body_7;
+	}
+	&__btn{
+		padding: toRem(11) toRem(30);
+		border-radius: toRem(30);
+		margin-bottom: toRem(30);
+		background:$gold;
+		transition: all .25s ease;
+		cursor: pointer;
+		@extend %body_8;
+		&:hover{
+			background: $goldDark;
+			color: white;
+		}
 	}
 }

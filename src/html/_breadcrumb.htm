@@ -1,0 +1,13 @@
+<div class="catalog__links">
+  <% links.forEach(function(link, index) { %>
+    <% if (index > 0) { %> 
+      <span class="catalog__link">/</span>
+    <% } %>
+    
+    <% if (link.active) { %>
+      <a class="catalog__link active" href="#"><%= link.name %></a>
+    <% } else { %>
+      <a class="catalog__link" href="#"><%= link.name %></a>
+    <% } %>
+  <% }); %>
+</div>

@@ -52,6 +52,10 @@
         max-width: toRem(288);
         margin-bottom: toRem(40);
         transition: all 0.25s ease;
+         
+        &:hover{
+            color: $gold;
+        }
     }
 
     &__bottom__content{
@@ -78,9 +82,8 @@
             }
         }
     }
-    
-    
-    &:hover &__info{
-        color: $gold;
+    @media (max-width:$mobile) {
+        margin: 0 auto;
     }
+   
 }
