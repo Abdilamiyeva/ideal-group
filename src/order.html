@@ -55,34 +55,17 @@
                         5 300 ₽
                         </p>
                     </div>
-                    <div
-                        class="basket__card__coupon__code"
-                        style="padding-left: 10px;"
-                    >
-                        <h4
-                        class="basket__card__coupon__code__title"
-                        style="margin-bottom: 5px;"
-                        >
-                        Применить купон
-                        </h4>
+                    <form class="basket__card__coupon__code" style="padding-left: 10px;">
+                        <h4 class="basket__card__coupon__code__title">Введите код купона для скидки:</h4>
                         <div class="basket__card__coupon__code__input">
-                        <input class="inp" type="text" />
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="5"
-                            height="8"
-                            viewBox="0 0 5 8"
-                            fill="none"
-                        >
-                            <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M0 0.480957L0 7.51908L5 3.98034L0 0.480957Z"
-                            fill="#999999"
-                            />
-                        </svg>
+                            <input class="inp" type="text">
+                            <button type="submit" class="coupon-submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.480957L0 7.51908L5 3.98034L0 0.480957Z" fill="#999999"/>
+                                </svg>
+                            </button>
                         </div>
-                    </div>
+                    </form>
                     <button class="order__accordion__content__next--btn">
                         Далее
                     </button>
@@ -102,7 +85,7 @@
                         class="order__accordion__content__delivery__card"
                         >
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" id="check__1" />
+                            <input name="delivery_region" type="radio" id="check__1" />
                             <label for="check__1">
                             <svg viewBox="0,0,50,50">
                                 <path d="M5 30 L 20 45 L 45 5"></path>
@@ -152,7 +135,7 @@
                         class="order__accordion__content__delivery__card"
                         >
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" id="check__2" />
+                            <input  name="delivery_region" type="radio" id="check__2" />
                             <label for="check__2">
                             <svg viewBox="0,0,50,50">
                                 <path d="M5 30 L 20 45 L 45 5"></path>
@@ -365,7 +348,7 @@
                         class="order__accordion__content__delivery__card"
                         >
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" id="check__3" />
+                            <input name="delivery_region_2" type="radio" id="check__3" />
                             <label for="check__3">
                             <svg viewBox="0,0,50,50">
                                 <path d="M5 30 L 20 45 L 45 5"></path>
@@ -408,7 +391,7 @@
                         class="order__accordion__content__delivery__card"
                         >
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" id="check__4" />
+                            <input   name="delivery_region_2" type="radio" id="check__4" />
                             <label for="check__4">
                             <svg viewBox="0,0,50,50">
                                 <path d="M5 30 L 20 45 L 45 5"></path>

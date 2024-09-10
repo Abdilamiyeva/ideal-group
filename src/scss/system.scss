@@ -209,6 +209,7 @@
             }
             &__button{
                 margin-bottom: toRem(39);
+                margin-top: toRem(40);
                 .btn{
                     font-size: toRem(15);
                     font-weight: 500;
@@ -259,9 +260,7 @@
             .swiper{
                 margin-top: toRem(30);
                 &-wrapper{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    margin: 0 auto;
                 }
                &-button-next{
                 position: absolute;
