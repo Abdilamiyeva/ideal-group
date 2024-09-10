@@ -187,8 +187,6 @@ import "./files/sliders.js";
 // Сніппет(HTML):
 import './files/scroll/lazyload.js';
 
-import './files/main.js'
-
 // Спостерігач за об'єктами з атрибутом data-watch
 // Документація: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сніппет(HTML):

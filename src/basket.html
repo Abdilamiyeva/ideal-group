@@ -9,11 +9,7 @@
       @@include('html/_header.htm', {})
       <div class="basket">
         <div class="basket__container">
-          <div class="catalog__links">
-            <a class="catalog__link active" href="#">Главная</a>
-            <a class="catalog__link" href="#">/</a>
-            <a class="catalog__link" href="#">Корзина</a>
-          </div>
+          @@include('html/_breadcrumb.htm',{})
           <h1 class="product__section__title">
             Корзина
           </h1>

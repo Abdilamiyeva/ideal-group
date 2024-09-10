@@ -24,14 +24,37 @@ import "../../scss/base/swiper.scss";
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
-new Swiper(".product-swiper__wrap", {
+
+const swiper = new Swiper('.product-swiper__wrap', {
   modules: [Navigation],
   slidesPerView: 1,
   navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
   },
 });
+
+function updateActiveThumbnail(index) {
+  const thumbnails = document.querySelectorAll('.product-swiper__images--wrap');
+  thumbnails.forEach((thumb, idx) => {
+    if (idx === index) {
+      thumb.classList.add('active');
+    } else {
+      thumb.classList.remove('active');
+    }
+  });
+}
+
+document.querySelectorAll('.product-swiper__images--wrap').forEach((thumbnail, index) => {
+  thumbnail.addEventListener('click', () => {
+    swiper.slideTo(index);
+  });
+});
+
+swiper.on('slideChange', () => {
+  updateActiveThumbnail(swiper.realIndex);
+});
+
 
 new Swiper(".swiper-first", {
   modules: [Navigation],

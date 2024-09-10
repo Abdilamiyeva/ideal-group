@@ -1,13 +1,18 @@
-<div class="catalog__links">
-  <% links.forEach(function(link, index) { %>
-    <% if (index > 0) { %> 
-      <span class="catalog__link">/</span>
-    <% } %>
-    
-    <% if (link.active) { %>
-      <a class="catalog__link active" href="#"><%= link.name %></a>
-    <% } else { %>
-      <a class="catalog__link" href="#"><%= link.name %></a>
-    <% } %>
-  <% }); %>
-</div>
+<ul class="catalog__links"> 
+  <li> 
+    <a class="catalog__link" href="/home.html">Главная</a> 
+  </li> 
+  <li> 
+    <a class="catalog__link" href="#"> Каталог</a> 
+  </li> 
+  <li> 
+    <a class="catalog__link" href="#">Имплантационная система DIO</a> 
+  </li> 
+  <li> 
+    <a href="#">Имплантаты</a> 
+  </li> 
+  <li class="catalog__active-link">
+    <a href="#">Имплантат винтообразный (UF (II) Fixture) диаметр 4.0 мм, длина 
+      10 мм (UF(II) 4010SF)</a>
+  </li> 
+</ul>

@@ -1,0 +1,26 @@
+.catalog__links{ 
+    display: flex; 
+    gap: 0 5px; 
+    
+    li{ 
+     font-size: toRem(14); 
+     font-weight: 400; 
+     a{ 
+      color: $mainColor; 
+     } 
+     &::after{ 
+      content: '/'; 
+      color: $mainColor; 
+     } 
+    
+     &:last-child::after{ 
+      content: none; 
+     } 
+    } 
+    .catalog__active-link{
+        a{
+            text-decoration: underline;
+            color: $goldDark;
+        }
+     }
+   }

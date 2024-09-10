@@ -9,21 +9,7 @@
       @@include('html/_header.htm', {})
       <section id="catalog"  class="categories">
         <div class="categories__container">
-          <!-- <div class="catalog__links">
-            <a class="catalog__link active" href="#">Главная</a>
-            <a class="catalog__link" href="#">/</a>
-            <a class="catalog__link" href="#">Каталог</a>
-          </div> -->
-          <!-- @@include('html/_breadcrumb.htm', {
-            "links": [
-              { "name": "Главная", "active": true },
-              { "name": "Каталог", "active": true },
-              { "name": "Продукты", "active": true },
-              { "name": "Контакты", "active": false }
-            ]
-          }) -->
-          
-          
+          @@include('html/_breadcrumb.htm',{})
           <h1 class="catalog__section-title">Каталог</h1>
             <div class="categories__list">
                 @@include('html/_category.htm',{ "image":"cat9.png", "title":

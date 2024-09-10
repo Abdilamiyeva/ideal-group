@@ -8,13 +8,7 @@
       @@include('html/_header.htm', {})
       <div class="system">
         <div class="system__container">
-          <div class="catalog__links">
-            <a class="catalog__link active" href="./home.html">Главная</a>
-            <span class="catalog__link" >/</span>
-            <a class="catalog__link active" href="./catalog.html">Каталог</a>
-            <span class="catalog__link" >/</span>
-            <a class="catalog__link" href="#">Имплантационная система DIO</a>
-          </div>
+          @@include('html/_breadcrumb.htm',{})
           <h1 class="system__title">Имплантационная система DIO</h1>
           <button class="system__filter-btn">Фильтр </button>
           <div class="system__content">

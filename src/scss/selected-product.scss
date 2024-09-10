@@ -6,19 +6,21 @@
         &__cards{
             display: flex;
             gap: toRem(30);
-            overflow-x: auto;
-            @media (min-width: $mobileSmall) {
-                @include gridCards("fit", toRem(240), 1fr);           
+            margin-bottom: 20px;
+            @media (min-width: 0) {
+                @include gridCards("fit", toRem(300), 1fr);
             }
-            @media (min-width: $tablet) {
-                grid-template-columns: repeat(4, 1fr);
-                @include adaptiveValue("column-gap", 30, 30);
-                @include adaptiveValue("row-gap", 30, 20);
+
+            @media (min-width: $pcSmall) {
+                @include gridCards("fit", toRem(240), 1fr);
+                @include gridCards(fit, 1fr, 1fr, toRem(30));
+                @include adaptiveValue("column-gap", 60, 30);
+                @include adaptiveValue("row-gap", 65, 20);  
             }
            
         }
         &__card{
-            @media (min-width: $mobileSmall) {
+            @media (min-width: 0) {
                 margin: 0 auto; 
             }
         }
