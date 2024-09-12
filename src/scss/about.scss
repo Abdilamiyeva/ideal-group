@@ -20,11 +20,11 @@
         
         &__information{
             &__text{
-                font-size: toRem(16);
                 font-weight: 400;
                 color: $mainColor;
                 max-width: toRem(520);
                 margin-bottom: toRem(15);
+                @include adaptiveValue("font-size",16,14);
             }
         }
         @media (min-width:0) and (max-width:$tablet) {
@@ -73,11 +73,11 @@
         &__bottom__text{
             color:$mainColor;
             text-align: center;
-            font-size: toRem(24);
             font-weight: 500;
             text-transform: uppercase;
             max-width: toRem(1400px);
             @include adaptiveValue("margin-bottom",60, 24);
+            @include adaptiveValue("font-size",24, 20);
             
         }
     }
@@ -95,17 +95,18 @@
     }
     &__card{
         h4{
-            font-size: toRem(16);
             font-weight: 500;
             margin-bottom: toRem(10);
+            @include adaptiveValue("font-size",16, 14);
             span{
                 font-weight: 400;
             }
         }
         p{
-            font-size: toRem(16);
             font-weight: 400;
             margin-bottom: toRem(10);
+            @include adaptiveValue("font-size",16, 14);
+
             span{
                 font-weight: 500;
             }
@@ -113,9 +114,10 @@
         ul {
             li{
                 list-style: disc;
-                font-size: toRem(16);
                 font-weight: 400;
                 margin-left: toRem(10);
+                font-size: toRem(16);
+
             }
         }
         .work__hours{

@@ -12,7 +12,6 @@
             .category__title {
                 border-color: $gold;
                 color: $gold;
-
                 path {
                     fill: $gold;
                 }
@@ -36,12 +35,9 @@
         justify-content: space-between;
         align-items: center;
         gap: toRem(20);
-
         padding: toRem(15) 0;
         border-top: 1px solid $black_1;
-
         font-weight: 500;
-
         transition: all 0.2s ease;
 
         svg {
@@ -51,6 +47,9 @@
             path {
                 transition: fill 0.2s ease;
             }
+        }
+        @media (max-width:$mobile) {
+            font-size: toRem(14);
         }
     }
 }

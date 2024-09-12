@@ -10,22 +10,54 @@
                 border-bottom: 2px solid $mainColor;
                 @extend %heading_3;
                 @include adaptiveValue("margin-bottom", 60, 24);
-                @include adaptiveValue("margin-top", 60, 24);      
+                @include adaptiveValue("margin-top", 60, 24); 
+                 
+                @media (max-width:$mobile) {
+                    font-size: toRem(24);
+                    @include adaptiveValue("margin-bottom", 40, 24);
+                    @include adaptiveValue("margin-top", 30, 24); 
+                }
         }
         &__filter-btn{
-            display: none;
+            width: 100%;
             color: #333;
             margin-bottom: toRem(20);
             transition: all .5s ease;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
             @extend %body_1;
+            .arrow {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border: solid black;
+                border-width: 0 2px 2px 0;
+                transform: rotate(0deg);
+                transition: transform 0.3s ease;
+                transform-origin: center;
+              }
+            .arrow {
+                transition: all 0.3s ease;
+                transform: rotate(45deg);
+                &:hover{
+                    border-color: $goldDark;
+                }
+            }  
+            .active-sidebar .arrow {
+                transform: rotate(270deg);
+            }  
             &:hover{
                 color: $goldDark;
-                text-decoration: underline;
+            }
+             &:hover .arrow{
+                border-color: $goldDark;
             }
             @media (max-width:$mobile) {
-                display: block; 
+                display: flex; 
                 margin-bottom: toRem(30);           
             }
+              
         }
         &__content{
             display: flex;
@@ -34,10 +66,10 @@
 
             @media (min-width: 0) {
                 flex-direction: column;
-                width: 100%;
             }
             @media (min-width: $mobile) {
-                flex-direction: row;  
+                flex-direction: row; 
+                justify-content: space-between;
             }
         }
         &__left__content{
@@ -122,7 +154,12 @@
                         margin: 0;
                         }
                     }
+                    @media (max-width:$mobile) {
+                        justify-content: space-between;
+                        
+                    }
                 } 
+
             }
             .range__values{
                 display: flex;
@@ -198,8 +235,7 @@
                 gap: toRem(30);
                 @media (min-width:0) {
                     @include gridCards("fit", toRem(350), 1fr);  
-                    @include adaptiveValue("column-gap", 60, 30);
-                    @include adaptiveValue("row-gap", 60, 20);         
+                    @include adaptiveValue("row-gap", 200, 20);  
                 }
                 @media (min-width: $tablet) {
                     grid-template-columns: repeat(3, 1fr);
@@ -237,6 +273,10 @@
                 }
               
             }
+            @media (max-width:$tablet) {
+                width: 40%;
+                
+            }
             @media (max-width:$mobile) {
                 width: 100%;
             }
@@ -249,13 +289,20 @@
             text-align: center;
             @include adaptiveValue("margin-top",60, 20);
             @include adaptiveValue("margin-bottom",57, 20);
+              
+            @media (max-width:$mobile) {
+                font-size: toRem(20);
+                @include adaptiveValue("margin-bottom", 30, 24);
+                @include adaptiveValue("margin-top", 30, 24); 
+            }
         }
     }
     .recommendations__cards{
         position: relative;
-        padding: 0 20px;
+        padding: 0 toRem(20);
         background: #EFEFEF;
-        height: 600px;
+        margin-bottom: toRem(30);
+        padding-bottom: toRem(30);
         .recommendations__container{
             .swiper{
                 margin-top: toRem(30);
@@ -268,7 +315,6 @@
                 right: 0;
                 top:226px;
                 cursor: pointer;
-
                }
                &-button-prev{
                 position: absolute;

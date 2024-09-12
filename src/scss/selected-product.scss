@@ -14,7 +14,7 @@
             @media (min-width: $pcSmall) {
                 @include gridCards("fit", toRem(240), 1fr);
                 @include gridCards(fit, 1fr, 1fr, toRem(30));
-                @include adaptiveValue("column-gap", 60, 30);
+                @include adaptiveValue("column-gap", 52, 30);
                 @include adaptiveValue("row-gap", 65, 20);  
             }
            

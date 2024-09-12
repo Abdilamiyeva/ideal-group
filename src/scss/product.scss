@@ -11,6 +11,12 @@
       @include adaptiveValue("margin-top", 62, 30);
       @include adaptiveValue("margin-bottom", 82, 40);
       @include adaptiveValue("padding-bottom", 28, 20);
+      @media (max-width:$mobile) {
+        font-size: toRem(18);
+        @include adaptiveValue("margin-top", 62, 30);
+        @include adaptiveValue("margin-bottom", 82, 30);
+        @include adaptiveValue("padding-bottom", 20, 18);
+      }
     }
     &__card {
       display: flex;
@@ -63,6 +69,9 @@
               }
             }
           }
+          @media (max-width:$mobile) {
+            width: 100%;
+          }
         }
         &--section--2 {
           border-radius: toRem(6);
@@ -78,6 +87,11 @@
           }
           &--btn{
             margin-top: toRem(30);
+            width: 100%;
+            @include adaptiveValue("font-size", 16, 14);
+          }
+          @media (max-width:$mobile) {
+            width: 100%;
           }
         }
       }
@@ -90,28 +104,23 @@
   .product__tab {
     &__wrapper {
       width: 550px;
-      border-bottom: 2px solid #D9D9D9;
       margin-bottom: toRem(30);
       display: flex;
       @media (max-width:$mobile) {
         width: 100%;
       }
     }
-    &__title {
+    .categories__title {
       font-size: toRem(14);
-      font-weight: 500;
+      font-weight: 400;
       text-align: center;
       padding: 0 toRem(40);
       @include adaptiveValue("padding-bottom", 14, 5);
-      &._tab-active {
-        border-bottom: 2px solid $black_1;
-      }
-
       @media (max-width:$mobileSmall) {
-        padding: toRem(10) toRem(20);
-        
+        padding: toRem(10) toRem(10);  
       }
     }
+
     &__content {
       max-width: 685px;
     }
@@ -133,9 +142,9 @@
         }
       }
       &__sub__title {
-        font-size: toRem(16);
         font-weight: 500;
         margin-bottom: toRem(12);
+        @include adaptiveValue("font-size", 16, 14);
       }
       &__rating {
         display: flex;
@@ -207,6 +216,7 @@
       
     }
   }
+  
   .product__swiper__title{
       width: 100%;
       background: $grey;
@@ -227,9 +237,14 @@
         flex-wrap: wrap;
         gap: toRem(20);
         @include adaptiveValue("padding-top", 60, 24);     
-        @include adaptiveValue("padding-bottom", 30, 24);        
+        @include adaptiveValue("padding-bottom", 30, 24); 
+        @media (max-width:$pc) {
+          padding-top: toRem(0);
+          
+        }       
     }
     &__card{
+
         &__title{
             font-size: toRem(18);
             font-weight: 400;
@@ -260,8 +275,8 @@
             }
             .text{
                 margin-bottom: toRem(30);
-                font-size: toRem(16);
                 font-weight: 400;
+                @include adaptiveValue("font-size", 16, 14);
                 &.__item{
                     list-style: disc;
                     margin-left: 20px;
@@ -269,28 +284,41 @@
                 &.text__end{
                     margin-top: toRem(50);
                 }
+                @media (max-width:$mobile) {
+                  margin-bottom: toRem(10);
+                  &.text__end{
+                    margin-top: toRem(10);
+                }
+                  
+                } 
             }
             .text__second{
                 max-width: toRem(430);
+            }
+            @media (max-width:$mobileSmall) {
+              min-height: 220px;
             }
         }
         &__link{
             float: right;
             margin-top: toRem(-14);
-            font-size: toRem(16);
             font-weight: 400;
             color: $goldDark;
+            @include adaptiveValue("font-size", 16, 14);
+            @media (max-width:$mobile) {
+                margin-top: toRem(30);
+            }
         }
         @media (min-width:0) and (max-width:$mobile){
             &__information{
+              padding: toRem(20) toRem(7);
                 &__logos{
                     display: none;
                   
                 }
-              
-            }
-            
+            } 
         }
     }
+  
   }
 }

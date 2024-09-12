@@ -8,10 +8,11 @@
         font-size: toRem(24);
         font-weight: 500;
         text-transform: uppercase;
-        padding-bottom: toRem(28);
         border-bottom: 1px solid $mainColor;
+        @include adaptiveValue("font-size", 24, 19);
         @include adaptiveValue("margin-top", 62, 24);
         @include adaptiveValue("margin-bottom", 60, 24);
+        @include adaptiveValue("padding-bottom", 28, 10);
     }
     &__card{
         display: flex;
@@ -22,9 +23,11 @@
 
         &__information{
             &__text{
-             font-size: toRem(16);
+             
              margin-bottom: toRem(10);
              font-weight: 500;
+            @include adaptiveValue("font-size", 16, 14);
+
              span{
                 font-weight: 400;
                 &.work__time{
@@ -42,9 +45,10 @@
                 margin-top: toRem(30);
                 margin-bottom: toRem(20);
                 span{
-                    font-size: toRem(16);
                     margin-bottom: toRem(10);
-                    font-weight: 500;   
+                    font-weight: 500;
+                    @include adaptiveValue("font-size", 16, 14);
+
                 }
                 svg{
                     cursor: pointer;
@@ -64,8 +68,9 @@
                 li{
                     list-style: disc;
                     margin-left: toRem(30);
-                    font-size: toRem(16);
                     font-weight: 400;
+                    @include adaptiveValue("font-size", 16, 14);
+
                 }
             }
         }

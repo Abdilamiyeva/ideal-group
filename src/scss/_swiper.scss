@@ -6,8 +6,8 @@
 
   &__images {
     width: 90px;
-    height: 300px;
-    overflow-y: auto;
+    height: 200px;
+    // overflow-y: auto;
     display: flex;
     flex-direction: column;
     margin-top: toRem(80);
@@ -23,6 +23,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 auto;
     }
 
     &--wrap.active {
@@ -33,15 +34,15 @@
       width: 20px;
       height: 42px;
       margin: 0 auto;
-      object-fit: cover;
     }
 
     @media (max-width:$mobile) {
       height: 70px;
       gap: 0px;
-      margin-top: toRem(30);
+      margin-top: toRem(10);
       flex-direction: row;
-      width: 100%;
+      margin: 0 auto;
+      width: 50%;
   
    }
   }

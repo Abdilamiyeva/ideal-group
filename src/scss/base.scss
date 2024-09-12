@@ -159,7 +159,10 @@
 	font-weight: 500;
 	@include adaptiveValue("font-size", 36, 21);
 }
-
+%heading_4{
+	font-weight: 500;
+	@include adaptiveValue("font-size", 24, 20);
+}
 %body_1 {
 	font-weight: 600;
 	font-size: toRem(20);

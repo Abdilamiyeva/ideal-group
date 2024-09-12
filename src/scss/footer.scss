@@ -28,6 +28,9 @@
     &__menu {
 
     }
+    @media (max-width:$mobileSmall) {
+        font-size: toRem(14);
+    }
 }
 .left-footer {
     // .left-footer__logo
@@ -103,16 +106,18 @@
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: toRem(5);
+
+        @media (max-width:$mobileSmall) {
+            font-size: toRem(14);
+        }
     }
     // .menu-footer__link
     &__link {
         text-decoration: underline;
         color: $gold;
-        @media (any-hover: hover) {
             &:hover {
                 color: $goldDark;
             }
-        }
     }
 }
 //====================================================================================================

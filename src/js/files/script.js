@@ -35,8 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (filterBtn) {
     filterBtn.addEventListener("click", function () {
       const content = document.querySelector(".system__left__content");
+      const arrow = document.querySelector(".arrow");
       if (content) {
         content.classList.toggle("active-sidebar");
+      }
+      if (content.classList.contains("active-sidebar")) {
+        arrow.style.transform = "rotate(-135deg)";
+      } else {
+        arrow.style.transform = "rotate(45deg)";
       }
     });
   }
@@ -46,7 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   const rangeStart = document.querySelector("#value-start");
   const rangeEnd = document.querySelector("#value-end");
-  const priceInputs = document.querySelectorAll(".retail__price__values__wrapper input");
+  const priceInputs = document.querySelectorAll(
+    ".retail__price__values__wrapper input"
+  );
 
   const defaultStart = "0 ₽";
   const defaultEnd = "147 000 ₽";
@@ -95,8 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const nextButtons = document.querySelectorAll(".order__accordion__content__next--btn");
-  const prevButtons = document.querySelectorAll(".order__accordion__content__prev--btn");
+  const nextButtons = document.querySelectorAll(
+    ".order__accordion__content__next--btn"
+  );
+  const prevButtons = document.querySelectorAll(
+    ".order__accordion__content__prev--btn"
+  );
   let currentIndex = 0;
 
   nextButtons.forEach((button) => {
@@ -131,21 +143,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-// map
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-      center: [41.998507, -93.639057], 
-      zoom: 15
+  // map
+  ymaps.ready(init);
+
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [55.7558, 37.6176], 
+      zoom: 10,
+    });
+
+    var geocoder = ymaps.geocode("Москва, ул. Жебрунова д.6 стр. 1 офис 351", {
+      results: 1,
+    });
+
+    geocoder.then(function (res) {
+      var firstGeoObject = res.geoObjects.get(0);
+      var coords = firstGeoObject.geometry.getCoordinates();
+
+      myMap.setCenter(coords, 15);
+      myMap.geoObjects.add(
+        new ymaps.Placemark(coords, {
+          balloonContent: "Москва, ул. Жебрунова д.6 стр. 1 офис 351",
+        })
+      );
+    });
+  }
+  
+  // rating
+  document.querySelectorAll(".rating__input").forEach((input) => {
+    input.addEventListener("change", function () {
+      const ratingValue = this.value;
+
+      fetch("/submit-rating", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ rating: ratingValue }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Успешно отправлено:", data);
+        })
+        .catch((error) => {
+          console.error("Ошибка отправки:", error);
+        });
+    });
   });
-  var myPlacemark = new ymaps.Placemark([41.998507, -93.639057], {
-      hintContent: 'WebFilings, University Boulevard, Ames, IA',
-      balloonContent: 'WebFilings, University Boulevard, Ames, IA'
-  });
-  myMap.geoObjects.add(myPlacemark);
 });
-
-
-
-});
-
-

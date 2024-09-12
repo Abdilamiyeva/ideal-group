@@ -6,5 +6,11 @@
         @extend %heading_3;
         @include adaptiveValue("margin-bottom", 60, 24);
         @include adaptiveValue("margin-top", 60, 24);
+
+        @media (max-width:$mobile) {
+            font-size: toRem(24);
+            @include adaptiveValue("margin-bottom", 40, 24);
+            @include adaptiveValue("margin-top", 40, 24);
+        }
     }
 }

@@ -1,6 +1,7 @@
 .catalog__links{ 
     display: flex; 
     gap: 0 5px; 
+    flex-wrap:wrap;
     
     li{ 
      font-size: toRem(14); 

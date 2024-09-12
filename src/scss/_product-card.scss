@@ -5,6 +5,10 @@
     cursor: pointer;
     padding-top: toRem(20);
     background: white;
+    transition: all 0.25s ease;
+    &:hover{
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
+    }
     &__image{
         display: block;
         width: 75.461px;
@@ -41,9 +45,9 @@
     &__price{
         color: $mainColor;
         display: block;
-        font-size: toRem(24);
         font-weight: 600;
-        margin-bottom: toRem(20);
+        @include adaptiveValue("font-size", 24, 18);
+        @include adaptiveValue("margin-bottom", 20, 16);
     }
     &__info{
         color: $mainColor;
