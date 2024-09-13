@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerDropdown = document.getElementById("headerDropdown");
   const dropdownContent = document.getElementById("dropdownContent");
   if (headerDropdown && dropdownContent) {
-    headerDropdown.addEventListener("mouseup", () => {
+    headerDropdown.addEventListener("click", () => {
       dropdownContent.classList.toggle("active");
     });
   }
